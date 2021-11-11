@@ -46,7 +46,7 @@ namespace MatrixCalculatorAtWINFORMS
         public Form1()
         {
             InitializeComponent();
-             
+            //comboOperations.SelectedIndex = 0;
 
 
 
@@ -89,9 +89,9 @@ namespace MatrixCalculatorAtWINFORMS
 
         private void WriteMatrixR()
         {
-            for (int i = 0; i < counterRowsB; i++)
+            for (int i = 0; i < counterRowsA; i++)
             {
-                for (int j = 0; j < counterColumnsB; j++)
+                for (int j = 0; j < counterColumnsA; j++)
                 {
                     T_MatrixR[i,j].Text = Convert.ToString(MatrixR[i,j]);
                 }
@@ -109,75 +109,13 @@ namespace MatrixCalculatorAtWINFORMS
             }
         }
 
-        private void comboOperations_SelectedIndexChanged(object sender, EventArgs e)// обработка действий при выборе знака
-        {
-            switch (comboOperations.SelectedIndex)// обработка действий при выборе знака
-            {
-                case 0:
-                    {
-                        labelMultiplicationType.Visible = false;// скрываем при сложении тип операции
-                        panelMultiplicationType.Visible = false;
-                        VisibleMatrixB();
-
-                        panelForoneNum.Visible = false;
-                        texboxForOneNum.Visible = false;
-                        break;
-                    }
-
-                case 1:
-                    {
-
-                        labelMultiplicationType.Visible = false;// скрываем при вычитании тип операции
-                        panelMultiplicationType.Visible = false;
-
-                        panelForoneNum.Visible = false;
-                        texboxForOneNum.Visible = false;
-                        VisibleMatrixB();
-                        break;
-                    }
-
-                case 2:
-                    {
-                        VisibleMatrixB();
-                        labelMultiplicationType.Text = "Тип умножения";
-                        radioButtonMultiplicationType1.Visible = true;
-                        radioButtonMultiplicationType1.Text = "[A]×[B]";
-                        radioButtonMultiplicationType2.Text = "[A]×[n]";
-                        labelMultiplicationType.Visible = true;// показываем при умножении
-                        panelMultiplicationType.Visible = true;
-
-                        panelForoneNum.Visible = false;
-                        texboxForOneNum.Visible = false;
-                        break;
-                    }
-
-                case 3:
-                    {
-                        panel4.Visible = false;
-                        label4.Visible = false;
-                        buttonBMinusСolumn.Visible = false;
-                        buttonBPlusСolumn.Visible = false;
-                        buttonBMinusRows.Visible = false;
-                        buttonBPlusRows.Visible = false;
-                        refreshB.Visible = false;
-                        
-                        panelForoneNum.Visible = true;
-                        texboxForOneNum.Visible = true;              
-                                                
-                        labelMultiplicationType.Visible = false;// показываем при делении
-                        panelMultiplicationType.Visible = false;
-                        break;
-                        
-                    }
-
-            }
-        }
+        
 
         private void Form1_Load(object sender, EventArgs e)//действия при загрузке формы
         {           
             this.Size = new Size(850, 420);
             checkBoxHints.Checked = Properties.Settings.Default.checkBoxHints;
-
+            
 
 
             arrСolumnsA = new TextBox[,] { { textBoxA1_1, textBoxA2_1, textBoxA3_1, textBoxA4_1, textBoxA5_1 },// столбцы матрицы А
@@ -257,7 +195,69 @@ namespace MatrixCalculatorAtWINFORMS
             
         }
 
-        
+        private void comboOperations_SelectedIndexChanged(object sender, EventArgs e)// обработка действий при выборе знака
+        {
+            switch (comboOperations.SelectedIndex)// обработка действий при выборе знака
+            {
+                case 0:
+                    {
+                        labelMultiplicationType.Visible = false;// скрываем при сложении тип операции
+                        panelMultiplicationType.Visible = false;
+                        VisibleMatrixB();
+
+                        panelForoneNum.Visible = false;
+                        texboxForOneNum.Visible = false;
+                        break;
+                    }
+
+                case 1:
+                    {
+
+                        labelMultiplicationType.Visible = false;// скрываем при вычитании тип операции
+                        panelMultiplicationType.Visible = false;
+
+                        panelForoneNum.Visible = false;
+                        texboxForOneNum.Visible = false;
+                        VisibleMatrixB();
+                        break;
+                    }
+
+                case 2:
+                    {
+                        VisibleMatrixB();
+                        labelMultiplicationType.Text = "Тип умножения";
+                        radioButtonMultiplicationType1.Visible = true;
+                        radioButtonMultiplicationType1.Text = "[A]×[B]";
+                        radioButtonMultiplicationType2.Text = "[A]×[n]";
+                        labelMultiplicationType.Visible = true;// показываем при умножении
+                        panelMultiplicationType.Visible = true;
+
+                        panelForoneNum.Visible = false;
+                        texboxForOneNum.Visible = false;
+                        break;
+                    }
+
+                case 3:
+                    {
+                        panel4.Visible = false;
+                        label4.Visible = false;
+                        buttonBMinusСolumn.Visible = false;
+                        buttonBPlusСolumn.Visible = false;
+                        buttonBMinusRows.Visible = false;
+                        buttonBPlusRows.Visible = false;
+                        refreshB.Visible = false;
+
+                        panelForoneNum.Visible = true;
+                        texboxForOneNum.Visible = true;
+
+                        labelMultiplicationType.Visible = false;// показываем при делении
+                        panelMultiplicationType.Visible = false;
+                        break;
+
+                    }
+
+            }
+        }
         private void onlineHelp_Click(object sender, EventArgs e)//открываем справку в интернете в соответсвии со знаком
         {
             
@@ -954,56 +954,87 @@ namespace MatrixCalculatorAtWINFORMS
         }
         private void result_Click(object sender, EventArgs e)
         {
-           //try
-            //{
-                switch (comboOperations.SelectedIndex)
+           try
+            {
+                if (radioButtonTypeOperation1.Checked == true)
                 {
-                    case 0:
-                        {
+                    switch (comboOperations.SelectedIndex)
+                    {
 
-                            ClearMatrixR();
-                            MatrixA_Plus_MatrixB();
-                            ChangeOfZizeMatrixR();
 
-                            break;
-                        }
-                    case 1:
-                        {
-                            ClearMatrixR();
-                            MatrixA_Minus_MatrixB();
-                            ChangeOfZizeMatrixR();
+                        case 0:
+                            {
+                                    ClearMatrixR();
+                                    MatrixA_Plus_MatrixB();
+                                    ChangeOfZizeMatrixR();
+                                
 
-                            break;
-                        }
-                    case 2:
-                        {
-                            ClearMatrixR();
-                            MatrixA_Multiplication_MatrixB();
-                            ChangeOfZizeMatrixR();
+                                break;
+                            }
+                        case 1:
+                            {
+                                ClearMatrixR();
+                                MatrixA_Minus_MatrixB();
+                                ChangeOfZizeMatrixR();
 
-                            break;
-                        }
-                    case 3:
-                        {
+                                break;
+                            }
+                        case 2:
+                            {
+                                if (radioButtonMultiplicationType1.Checked == true)
+                                {
+                                    ClearMatrixR();
+                                    MatrixA_Multiplication_MatrixB();
+                                    ChangeOfZizeMatrixR();
+                                }
+                                if (radioButtonMultiplicationType2.Checked == true)
+                                {
+                                    ClearMatrixR();
+                                    MatrixA_Multiplication_Nums();
+                                    ChangeOfZizeMatrixR();
+                                }
 
-                            break;
-                        }
-                    default:
-                        {
-                            MessageBox.Show("Выберете знак операции",
-                                "Калькулятор матриц", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            break;
-                        }
+                                break;
+                            }
+                        case 3:
+                            {
+                                ClearMatrixR();
+                                MatrixA_Division_Nums();
+                                ChangeOfZizeMatrixR();
+
+                                break;
+                            }
+                        default:
+                            {
+                                
+                                    MessageBox.Show("Выберете знак операции",
+                                        "Калькулятор матриц", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                break;
+                            }
+                    }
                 }
-            //}
-            //catch
-            //{
-                /*MessageBox.Show("Заполните все поля",
-                                "Калькулятор матриц", MessageBoxButtons.OK, MessageBoxIcon.Information);*/
-            //}
+                if(radioButtonTypeOperation2.Checked == true)
+                {
+                    ClearMatrixR();
+                    Exponentiation_MatrixA();
+                    ChangeOfZizeMatrixR();
+                }
+                if(radioButtonTypeOperation3.Checked == true)
+                {
+                    ClearMatrixR();
+                    Extraction_MatrixA();
+                    ChangeOfZizeMatrixR();
+
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Заполните все поля",
+                                "Калькулятор матриц", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
-        private void MatrixA_Plus_MatrixB()
+        private void MatrixA_Plus_MatrixB()//сложение мариц
         {
             if(counterRowsA == counterRowsB && counterColumnsA == counterColumnsB)
             {
@@ -1025,7 +1056,7 @@ namespace MatrixCalculatorAtWINFORMS
             }
         }
 
-        private void MatrixA_Minus_MatrixB()
+        private void MatrixA_Minus_MatrixB()//вычитание матриц
         {
             if (counterRowsA == counterRowsB && counterColumnsA == counterColumnsB)
             {
@@ -1047,7 +1078,7 @@ namespace MatrixCalculatorAtWINFORMS
             }
         }
 
-        private void MatrixA_Multiplication_MatrixB()
+        private void MatrixA_Multiplication_MatrixB()// умножение матрицы на матрицу
         {
             if(counterColumnsA == counterRowsB)
             {
@@ -1078,6 +1109,73 @@ namespace MatrixCalculatorAtWINFORMS
             }
         }
 
+
+        private void MatrixA_Multiplication_Nums()//умножение на число
+        {
+            double num = Convert.ToDouble(texboxForOneNum.Text);
+            FillingMatrixA();
+
+            for(int i = 0; i < counterRowsA; i++)
+            {
+                for(int j = 0; j < counterColumnsA; j++)
+                {
+                    
+                    MatrixR[i, j] = MatrixA[i, j] * num;
+                }
+            }
+            WriteMatrixR();
+
+        }
+
+        private void MatrixA_Division_Nums()// деление на число
+        {
+            double num = 1/Convert.ToDouble(texboxForOneNum.Text);
+            FillingMatrixA();
+
+            for (int i = 0; i < counterRowsA; i++)
+            {
+                for (int j = 0; j < counterColumnsA; j++)
+                {
+
+                    MatrixR[i, j] = MatrixA[i, j] * num;
+                }
+            }
+            WriteMatrixR();
+        }
+
+        private void Exponentiation_MatrixA()
+        {
+            double num = Convert.ToDouble(texboxForOneNum.Text);
+            //int check = 1;
+            FillingMatrixA();
+
+            for (int i = 0; i < counterRowsA; i++)
+            {
+                for (int j = 0; j < counterColumnsA; j++)
+                {
+
+                    MatrixR[i, j] = Math.Pow(MatrixA[i, j], num);
+                }
+            }
+            WriteMatrixR();
+        }
+
+        private void Extraction_MatrixA()
+        {
+            double num = 1/Convert.ToDouble(texboxForOneNum.Text);
+            //int check = 1;
+            FillingMatrixA();
+
+            for (int i = 0; i < counterRowsA; i++)
+            {
+                for (int j = 0; j < counterColumnsA; j++)
+                {
+
+                    MatrixR[i, j] = Math.Pow(MatrixA[i, j], num);
+                }
+            }
+            WriteMatrixR();
+        }
         private void button10_Click(object sender, EventArgs e)
         {
             string resultCopy = "";
@@ -1122,7 +1220,6 @@ namespace MatrixCalculatorAtWINFORMS
         {
             Properties.Settings.Default.checkBoxHints = checkBoxHints.Checked;
             Properties.Settings.Default.Save();
-                     
         }
     }
 
