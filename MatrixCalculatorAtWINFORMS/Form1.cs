@@ -291,7 +291,7 @@ namespace MatrixCalculatorAtWINFORMS
 
                 default:
                     {
-                        MessageBox.Show("Выберите один из знаков операции", "Калькулятор матриц", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Выберите один из знаков операции", "Калькулятор матриц", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         break;
                     }
             }
@@ -350,7 +350,7 @@ namespace MatrixCalculatorAtWINFORMS
                         if (checkBoxHints.Checked == false)
                         {
                             MessageBox.Show("Вы хотите убрать последний столбец. Операция невозможна.",
-                                "Калькулятор матриц", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                "Калькулятор матриц", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                         else
                         {
@@ -413,7 +413,7 @@ namespace MatrixCalculatorAtWINFORMS
                         if (checkBoxHints.Checked == false)
                         {
                             MessageBox.Show("Вы хотите убрать последнюю строку. Операция невозможна.",
-                                "Калькулятор матриц", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                "Калькулятор матриц", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                         else
                         {
@@ -474,7 +474,7 @@ namespace MatrixCalculatorAtWINFORMS
                         if (checkBoxHints.Checked == false)
                         {
                             MessageBox.Show("Вы достигли максимального количества столбцов. Операция невозможна.",
-                        "Калькулятор матриц", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        "Калькулятор матриц", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                         else
                         {
@@ -535,7 +535,7 @@ namespace MatrixCalculatorAtWINFORMS
                         if (checkBoxHints.Checked == false)
                         {
                             MessageBox.Show("Вы достигли максимального количества строк. Операция невозможна.",
-                        "Калькулятор матриц", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        "Калькулятор матриц", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                         else
                         {
@@ -602,7 +602,7 @@ namespace MatrixCalculatorAtWINFORMS
                         if (checkBoxHints.Checked == false)
                         {
                             MessageBox.Show("Вы хотите убрать последний столбец. Операция невозможна.",
-                            "Калькулятор матриц", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            "Калькулятор матриц", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                         else
                         {
@@ -664,7 +664,7 @@ namespace MatrixCalculatorAtWINFORMS
                         if (checkBoxHints.Checked == false)
                         {
                             MessageBox.Show("Вы хотите убрать последнюю строку. Операция невозможна.",
-                            "Калькулятор матриц", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            "Калькулятор матриц", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                         else
                         {
@@ -723,7 +723,7 @@ namespace MatrixCalculatorAtWINFORMS
                         if (checkBoxHints.Checked == false)
                         {
                             MessageBox.Show("Вы достигли максимального количества столбцов. Операция невозможна.",
-                        "Калькулятор матриц", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        "Калькулятор матриц", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                         else
                         {
@@ -783,7 +783,7 @@ namespace MatrixCalculatorAtWINFORMS
                         if (checkBoxHints.Checked == false)
                         {
                             MessageBox.Show("Вы достигли максимального количества строк. Операция невозможна.",
-                        "Калькулятор матриц", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        "Калькулятор матриц", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                         else
                         {
@@ -1049,7 +1049,7 @@ namespace MatrixCalculatorAtWINFORMS
                             {
 
                                 MessageBox.Show("Выберете знак операции",
-                                    "Калькулятор матриц", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    "Калькулятор матриц", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 break;
                             }
                     }
@@ -1070,7 +1070,7 @@ namespace MatrixCalculatorAtWINFORMS
             }
             catch
             {
-                MessageBox.Show("Заполните все поля",
+                MessageBox.Show("Warning",
                                 "Калькулятор матриц", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         
@@ -1094,7 +1094,7 @@ namespace MatrixCalculatorAtWINFORMS
             else
             {
                 MessageBox.Show("Размер матриц должен быть одинаковым. Вы можете освежить знания кликнув по кнопке «Открыть справку»",
-                            "Калькулятор матриц", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            "Калькулятор матриц", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -1116,7 +1116,7 @@ namespace MatrixCalculatorAtWINFORMS
             else
             {
                 MessageBox.Show("Размер матриц должен быть одинаковым. Вы можете освежить знания кликнув по кнопке «Открыть справку»",
-                            "Калькулятор матриц", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            "Калькулятор матриц", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -1147,8 +1147,8 @@ namespace MatrixCalculatorAtWINFORMS
             }
             else
             {
-                MessageBox.Show("Количество столбцов матрицы А должно равняться количеству столбцов матрицы В. Вы можете освежить знания кликнув по кнопке «Открыть справку»",
-                            "Калькулятор матриц", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Количество столбцов матрицы А должно равняться количеству строк матрицы В. Вы можете освежить знания кликнув по кнопке «Открыть справку»",
+                            "Калькулятор матриц", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -1224,7 +1224,7 @@ namespace MatrixCalculatorAtWINFORMS
             if (T_MatrixR[0, 0].Text == "")
             {
                 MessageBox.Show("Результата нет. Что копировать то?",
-                            "Калькулятор матриц", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            "Калькулятор матриц", MessageBoxButtons.OK, MessageBoxIcon.Question);
             }
             else
             {
@@ -1308,7 +1308,7 @@ namespace MatrixCalculatorAtWINFORMS
                 buttonBMinusRows.BackColor = Color.FromArgb(60, 60, 60);
                 buttonBPlusСolumn.BackColor = Color.FromArgb(98, 98, 98);
                 buttonBPlusRows.BackColor = Color.FromArgb(98, 98, 98);
-                refreshB.BackColor = Color.FromArgb(69, 69, 69);
+                refreshB.BackColor = Color.FromArgb(129, 129, 129);
                 for (int i = 0; i < 5; i++)
                 {
                     for (int j = 0; j < 5; j++)

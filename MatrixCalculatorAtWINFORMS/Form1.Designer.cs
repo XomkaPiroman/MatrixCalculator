@@ -496,7 +496,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.result.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.result.Location = new System.Drawing.Point(833, 147);
             this.result.Name = "result";
-            this.result.Size = new System.Drawing.Size(64, 63);
+            this.result.Size = new System.Drawing.Size(64, 64);
             this.result.TabIndex = 54;
             this.result.Text = "=";
             this.result.UseVisualStyleBackColor = false;
