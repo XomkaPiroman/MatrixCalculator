@@ -21,7 +21,7 @@ namespace MatrixCalculatorAtWINFORMS
         static private int counterColumnsR = 5;
         static private int counterRowsR = 5;
 
-        
+
 
         TextBox[,] arrСolumnsA;// массив столбцов матрицы А
         TextBox[,] arrRowsA;// массив строк матрицы А
@@ -39,8 +39,8 @@ namespace MatrixCalculatorAtWINFORMS
 
         TextBox[,] T_MatrixR = new TextBox[counterColumnsR, counterRowsR];
 
-        
-        
+
+
 
 
         public Form1()
@@ -52,15 +52,15 @@ namespace MatrixCalculatorAtWINFORMS
 
         }
 
-        
+
         private void FillingMatrixA()
         {
-            
-            for(int i = 0; i < counterRowsA; i++)
+
+            for (int i = 0; i < counterRowsA; i++)
             {
-                for(int j =0 ; j < counterColumnsA; j++)
+                for (int j = 0; j < counterColumnsA; j++)
                 {
-                   MatrixA[i, j] = Convert.ToDouble(arrRowsA[i, j].Text.Replace('.',','));
+                    MatrixA[i, j] = Convert.ToDouble(arrRowsA[i, j].Text.Replace('.', ','));
                 }
             }
         }
@@ -93,14 +93,14 @@ namespace MatrixCalculatorAtWINFORMS
             {
                 for (int j = 0; j < counterColumnsA; j++)
                 {
-                    T_MatrixR[i,j].Text = Convert.ToString(MatrixR[i,j]);
+                    T_MatrixR[i, j].Text = Convert.ToString(MatrixR[i, j]);
                 }
             }
         }
 
         private void WriteMatrixRForMult()
         {
-            for(int i = 0; i < counterRowsA; i++)
+            for (int i = 0; i < counterRowsA; i++)
             {
                 for (int j = 0; j < counterColumnsB; j++)
                 {
@@ -109,13 +109,13 @@ namespace MatrixCalculatorAtWINFORMS
             }
         }
 
-        
+
 
         private void Form1_Load(object sender, EventArgs e)//действия при загрузке формы
-        {           
+        {
             this.Size = new Size(850, 420);
-            checkBoxHints.Checked = Properties.Settings.Default.checkBoxHints;
             
+
 
 
             arrСolumnsA = new TextBox[,] { { textBoxA1_1, textBoxA2_1, textBoxA3_1, textBoxA4_1, textBoxA5_1 },// столбцы матрицы А
@@ -174,7 +174,7 @@ namespace MatrixCalculatorAtWINFORMS
                 Font = new Font("Segoe UI", 14.0f),
                 BackColor = Color.White,
                 Visible = false
-            
+
             };
             this.Controls.Add(texboxForOneNum);
             texboxForOneNum.BringToFront();
@@ -192,7 +192,10 @@ namespace MatrixCalculatorAtWINFORMS
                 TextAlign = ContentAlignment.MiddleCenter,
             };
             this.Controls.Add(listboxForOneNum);
-            
+
+            checkBoxHints.Checked = Properties.Settings.Default.checkBoxHints;
+            checkBoxForDark.Checked = Properties.Settings.Default.checkBoxForDark;
+
         }
 
         private void comboOperations_SelectedIndexChanged(object sender, EventArgs e)// обработка действий при выборе знака
@@ -260,45 +263,45 @@ namespace MatrixCalculatorAtWINFORMS
         }
         private void onlineHelp_Click(object sender, EventArgs e)//открываем справку в интернете в соответсвии со знаком
         {
-            
-                switch (comboOperations.SelectedIndex)
-                {
-                    case 0:
-                        {
-                            System.Diagnostics.Process.Start("https://telegra.ph/Summa-raznost-matric-11-08");
-                            break;
-                        }
 
-                    case 1:
-                        {
-                            System.Diagnostics.Process.Start("https://telegra.ph/Summa-raznost-matric-11-08");
-                            break;
-                        }
-
-                    case 2:
-                        {
-                            System.Diagnostics.Process.Start("https://telegra.ph/Umnozhenie-matric-11-08");
-                            break;
-                        }
-                    case 3:
-                       {
-                            System.Diagnostics.Process.Start("https://telegra.ph/Delenie-matric-11-08");
-                            break;
-                       }
-
-                    default:
-                       {
-                        MessageBox.Show("Выберите один из знаков операции","Калькулятор матриц",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            switch (comboOperations.SelectedIndex)
+            {
+                case 0:
+                    {
+                        System.Diagnostics.Process.Start("https://telegra.ph/Summa-raznost-matric-11-08");
                         break;
-                       }
-                }
-            
-            
+                    }
+
+                case 1:
+                    {
+                        System.Diagnostics.Process.Start("https://telegra.ph/Summa-raznost-matric-11-08");
+                        break;
+                    }
+
+                case 2:
+                    {
+                        System.Diagnostics.Process.Start("https://telegra.ph/Umnozhenie-matric-11-08");
+                        break;
+                    }
+                case 3:
+                    {
+                        System.Diagnostics.Process.Start("https://telegra.ph/Delenie-matric-11-08");
+                        break;
+                    }
+
+                default:
+                    {
+                        MessageBox.Show("Выберите один из знаков операции", "Калькулятор матриц", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        break;
+                    }
+            }
+
+
         }
 
         private void buttonAMinusСolumn_Click(object sender, EventArgs e)// уменьшение столбцов матрицы А
         {
-            switch(counterColumnsA)
+            switch (counterColumnsA)
             {
                 case 5:
                     {
@@ -357,13 +360,13 @@ namespace MatrixCalculatorAtWINFORMS
 
                         break;
                     }
-                
+
             }
         }
 
         private void buttonAMinusRows_Click(object sender, EventArgs e)// уменьшение строк матрицы А
         {
-            switch(counterRowsA)
+            switch (counterRowsA)
             {
                 case 5:
                     {
@@ -427,72 +430,72 @@ namespace MatrixCalculatorAtWINFORMS
         private void buttonAPlusСolumn_Click(object sender, EventArgs e)// прибавляем столбцы матрицы А
         {
             switch (counterColumnsA)
-                {
-                   
-                    case 1:
+            {
+
+                case 1:
+                    {
+                        for (int i = 0; i < counterRowsA; i++)
                         {
-                            for(int i = 0; i < counterRowsA; i++)
-                        {
-                            arrСolumnsA[1,i].Visible = true;
-                          
+                            arrСolumnsA[1, i].Visible = true;
+
                         }
                         counterColumnsA++;
-                            break;
-                        }
-                    case 2:
-                        {
+                        break;
+                    }
+                case 2:
+                    {
                         for (int i = 0; i < counterRowsA; i++)
                         {
                             arrСolumnsA[2, i].Visible = true;
                         }
                         counterColumnsA++;
                         break;
-                        }
-                    case 3:
-                        {
+                    }
+                case 3:
+                    {
                         for (int i = 0; i < counterRowsA; i++)
                         {
                             arrСolumnsA[3, i].Visible = true;
                         }
                         counterColumnsA++;
                         break;
-                        }
-                    case 4:
-                        {
+                    }
+                case 4:
+                    {
                         for (int i = 0; i < counterRowsA; i++)
                         {
                             arrСolumnsA[4, i].Visible = true;
                         }
                         counterColumnsA++;
                         break;
-                        }
-                    case 5:
-                        {
-                        if(checkBoxHints.Checked == false)
+                    }
+                case 5:
+                    {
+                        if (checkBoxHints.Checked == false)
                         {
                             MessageBox.Show("Вы достигли максимального количества столбцов. Операция невозможна.",
                         "Калькулятор матриц", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {
-                            
+
                         }
                         break;
-                        }
-                
+                    }
+
             }
         }
 
         private void buttonAPlusRows_Click(object sender, EventArgs e)// прибавляем строки матрицы А
         {
-            switch(counterRowsA)
+            switch (counterRowsA)
             {
                 case 1:
                     {
-                        for(int i = 0; i < counterColumnsA; i++)
+                        for (int i = 0; i < counterColumnsA; i++)
                         {
                             arrRowsA[1, i].Visible = true;
-                            
+
                         }
                         counterRowsA++;
                         break;
@@ -502,7 +505,7 @@ namespace MatrixCalculatorAtWINFORMS
                         for (int i = 0; i < counterColumnsA; i++)
                         {
                             arrRowsA[2, i].Visible = true;
-                            
+
                         }
                         counterRowsA++;
                         break;
@@ -512,7 +515,7 @@ namespace MatrixCalculatorAtWINFORMS
                         for (int i = 0; i < counterColumnsA; i++)
                         {
                             arrRowsA[3, i].Visible = true;
-                            
+
                         }
                         counterRowsA++;
                         break;
@@ -522,7 +525,7 @@ namespace MatrixCalculatorAtWINFORMS
                         for (int i = 0; i < counterColumnsA; i++)
                         {
                             arrRowsA[4, i].Visible = true;
-                            
+
                         }
                         counterRowsA++;
                         break;
@@ -792,7 +795,7 @@ namespace MatrixCalculatorAtWINFORMS
             }
         }
 
-       
+
 
         private void MultiplicationType(object sender, EventArgs e)// при умножении на число, матрица В пропадает
         {
@@ -804,6 +807,7 @@ namespace MatrixCalculatorAtWINFORMS
             }
             else
             {
+                FooForRefrashB();
                 panel4.Visible = false;
                 label4.Visible = false;
                 buttonBMinusСolumn.Visible = false;
@@ -816,7 +820,7 @@ namespace MatrixCalculatorAtWINFORMS
                 texboxForOneNum.Visible = true;
 
             }
-            
+
         }
         private void VisibleMatrixB()// метод для отображения матрицы В
         {
@@ -838,10 +842,10 @@ namespace MatrixCalculatorAtWINFORMS
                 comboOperations.Visible = true;
                 panelForoneNum.Visible = false;
                 texboxForOneNum.Visible = false;
-                
+
                 listboxForOneNum.Visible = false;
                 comboOperations.SelectedIndex = 0;
-                
+
             }
             if (radioButtonTypeOperation2.Checked == true)
             {
@@ -856,7 +860,7 @@ namespace MatrixCalculatorAtWINFORMS
                 buttonBPlusRows.Visible = false;
                 comboOperations.Visible = false;
                 refreshB.Visible = false;
-                    
+
 
                 panelForoneNum.Visible = true;
                 texboxForOneNum.Visible = true;
@@ -888,7 +892,7 @@ namespace MatrixCalculatorAtWINFORMS
 
         private void refreshA_Click(object sender, EventArgs e) // рефреш матрицы А
         {
-            for (int i = 0; i < 5; i++) 
+            for (int i = 0; i < 5; i++)
             {
                 for (int j = 0; j < 5; j++)
                 {
@@ -897,7 +901,7 @@ namespace MatrixCalculatorAtWINFORMS
                     counterRowsA = 5;
                     arrСolumnsA[i, j].Text = "";
                 }
-            }            
+            }
         }
 
         private void refreshB_Click(object sender, EventArgs e) // рефреш матрицы B
@@ -912,10 +916,22 @@ namespace MatrixCalculatorAtWINFORMS
                     arrСolumnsB[i, j].Text = "";
                 }
             }
-            
-            //T_MatrixR[0, 0].Text = Convert.ToString(counterRowsA);
-            //T_MatrixR[1, 0].Text = Convert.ToString(counterColumnsA);
 
+            
+        }
+        
+        private void FooForRefrashB()
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    arrСolumnsB[i, j].Visible = true;
+                    counterColumnsB = 5;
+                    counterRowsB = 5;
+                    arrСolumnsB[i, j].Text = "";
+                }
+            }
         }
 
 
@@ -925,7 +941,7 @@ namespace MatrixCalculatorAtWINFORMS
             {
                 for (int j = 0; j < 5; j++)
                 {
-                    if (T_MatrixR[i,j].Text != "")
+                    if (T_MatrixR[i, j].Text != "")
                     {
                         T_MatrixR[i, j].Visible = true;
                     }
@@ -934,9 +950,9 @@ namespace MatrixCalculatorAtWINFORMS
                         T_MatrixR[i, j].Visible = false;
                     }
                 }
-                                
+
             }
-                        
+
         }
 
         private void ClearMatrixR()
@@ -946,7 +962,7 @@ namespace MatrixCalculatorAtWINFORMS
             {
                 for (int j = 0; j < 5; j++)
                 {
-                   //MatrixR[i, j] = 0.0;
+                    //MatrixR[i, j] = 0.0;
                     T_MatrixR[i, j].Text = "";
                 }
 
@@ -954,7 +970,7 @@ namespace MatrixCalculatorAtWINFORMS
         }
         private void result_Click(object sender, EventArgs e)
         {
-           try
+            try
             {
                 if (radioButtonTypeOperation1.Checked == true)
                 {
@@ -964,10 +980,10 @@ namespace MatrixCalculatorAtWINFORMS
 
                         case 0:
                             {
-                                    ClearMatrixR();
-                                    MatrixA_Plus_MatrixB();
-                                    ChangeOfZizeMatrixR();
-                                
+                                ClearMatrixR();
+                                MatrixA_Plus_MatrixB();
+                                ChangeOfZizeMatrixR();
+
 
                                 break;
                             }
@@ -981,23 +997,37 @@ namespace MatrixCalculatorAtWINFORMS
                             }
                         case 2:
                             {
-                                if (radioButtonMultiplicationType1.Checked == true)
-                                {
-                                    ClearMatrixR();
-                                    MatrixA_Multiplication_MatrixB();
-                                    ChangeOfZizeMatrixR();
-                                }
-                                if (radioButtonMultiplicationType2.Checked == true)
-                                {
-                                    ClearMatrixR();
-                                    MatrixA_Multiplication_Nums();
-                                    ChangeOfZizeMatrixR();
-                                }
+                                if (counterColumnsA == 1 && counterRowsA == 1 )
 
+                                {
+                                    MessageBox.Show("Вижу у вас где-то одинокая циферка. Лучше воспользуйтесь типом умножения [A]×[n]",
+                                                "Калькулятор матриц", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                }
+                                if(counterColumnsB == 1 && counterRowsB == 1)
+                                {
+                                    MessageBox.Show("Вижу у вас где-то одинокая циферка. Лучше воспользуйтесь типом умножения [A]×[n]",
+                                                "Калькулятор матриц", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                }
+                                else
+                                {
+                                    if (radioButtonMultiplicationType1.Checked == true)
+                                    {
+                                        ClearMatrixR();
+                                        MatrixA_Multiplication_MatrixB();
+                                        ChangeOfZizeMatrixR();
+                                    }
+                                    if (radioButtonMultiplicationType2.Checked == true)
+                                    {
+                                        ClearMatrixR();
+                                        MatrixA_Multiplication_Nums();
+                                        ChangeOfZizeMatrixR();
+                                    }
+                                }
                                 break;
                             }
                         case 3:
                             {
+
                                 ClearMatrixR();
                                 MatrixA_Division_Nums();
                                 ChangeOfZizeMatrixR();
@@ -1006,20 +1036,20 @@ namespace MatrixCalculatorAtWINFORMS
                             }
                         default:
                             {
-                                
-                                    MessageBox.Show("Выберете знак операции",
-                                        "Калькулятор матриц", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                MessageBox.Show("Выберете знак операции",
+                                    "Калькулятор матриц", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 break;
                             }
                     }
                 }
-                if(radioButtonTypeOperation2.Checked == true)
+                if (radioButtonTypeOperation2.Checked == true)
                 {
                     ClearMatrixR();
                     Exponentiation_MatrixA();
                     ChangeOfZizeMatrixR();
                 }
-                if(radioButtonTypeOperation3.Checked == true)
+                if (radioButtonTypeOperation3.Checked == true)
                 {
                     ClearMatrixR();
                     Extraction_MatrixA();
@@ -1036,13 +1066,13 @@ namespace MatrixCalculatorAtWINFORMS
 
         private void MatrixA_Plus_MatrixB()//сложение мариц
         {
-            if(counterRowsA == counterRowsB && counterColumnsA == counterColumnsB)
+            if (counterRowsA == counterRowsB && counterColumnsA == counterColumnsB)
             {
                 FillingMatrixA();
                 FillingMatrixB();
-                for(int i = 0; i< counterRowsA; i++)
+                for (int i = 0; i < counterRowsA; i++)
                 {
-                    for(int j = 0; j < counterColumnsA; j++)
+                    for (int j = 0; j < counterColumnsA; j++)
                     {
                         MatrixR[i, j] = MatrixA[i, j] + MatrixB[i, j];
                     }
@@ -1080,23 +1110,24 @@ namespace MatrixCalculatorAtWINFORMS
 
         private void MatrixA_Multiplication_MatrixB()// умножение матрицы на матрицу
         {
-            if(counterColumnsA == counterRowsB)
-            {
-                 FillingMatrixA();
-                 FillingMatrixB();
 
-                for (int i = 0;  i < counterRowsA; i++ )
+            if (counterColumnsA == counterRowsB)
+            {
+                FillingMatrixA();
+                FillingMatrixB();
+
+                for (int i = 0; i < counterRowsA; i++)
                 {
-                    for(int j = 0; j< counterColumnsB; j++)
+                    for (int j = 0; j < counterColumnsB; j++)
                     {
-                        
-                        for(int k = 0; k< counterColumnsB; k ++)
+
+                        for (int k = 0; k < counterColumnsB; k++)
                         {
-                            MatrixR[i,j] += MatrixA[i, k] * MatrixB[k, j]; 
+                            MatrixR[i, j] += MatrixA[i, k] * MatrixB[k, j];
                         }
-                        
+
                     }
-               }
+                }
 
                 WriteMatrixRForMult();
 
@@ -1115,11 +1146,11 @@ namespace MatrixCalculatorAtWINFORMS
             double num = Convert.ToDouble(texboxForOneNum.Text);
             FillingMatrixA();
 
-            for(int i = 0; i < counterRowsA; i++)
+            for (int i = 0; i < counterRowsA; i++)
             {
-                for(int j = 0; j < counterColumnsA; j++)
+                for (int j = 0; j < counterColumnsA; j++)
                 {
-                    
+
                     MatrixR[i, j] = MatrixA[i, j] * num;
                 }
             }
@@ -1129,7 +1160,7 @@ namespace MatrixCalculatorAtWINFORMS
 
         private void MatrixA_Division_Nums()// деление на число
         {
-            double num = 1/Convert.ToDouble(texboxForOneNum.Text);
+            double num = 1 / Convert.ToDouble(texboxForOneNum.Text);
             FillingMatrixA();
 
             for (int i = 0; i < counterRowsA; i++)
@@ -1162,7 +1193,7 @@ namespace MatrixCalculatorAtWINFORMS
 
         private void Extraction_MatrixA()
         {
-            double num = 1/Convert.ToDouble(texboxForOneNum.Text);
+            double num = 1 / Convert.ToDouble(texboxForOneNum.Text);
             //int check = 1;
             FillingMatrixA();
 
@@ -1187,7 +1218,7 @@ namespace MatrixCalculatorAtWINFORMS
                     {
                         resultCopy += $"{ T_MatrixR[i, j].Text} ";
                     }
-                    
+
                 }
                 resultCopy += "\n";
             }
@@ -1199,7 +1230,7 @@ namespace MatrixCalculatorAtWINFORMS
         private void button11_Click(object sender, EventArgs e)
         {
 
-            if(buttonSettings.Text == "Настройки")
+            if (buttonSettings.Text == "Настройки")
             {
                 this.Size = new Size(850, 455);
                 buttonSettings.Text = "Скрыть настройки";
@@ -1221,10 +1252,182 @@ namespace MatrixCalculatorAtWINFORMS
             Properties.Settings.Default.checkBoxHints = checkBoxHints.Checked;
             Properties.Settings.Default.Save();
         }
+
+        private void checkBoxForDark_CheckedChanged(object sender, EventArgs e)// темная тема
+        {
+            Properties.Settings.Default.checkBoxForDark = checkBoxForDark.Checked;
+            Properties.Settings.Default.Save();
+            
+            if (checkBoxForDark.Checked == true)
+            {
+                this.BackColor = Color.FromArgb(27, 27, 27);// форма
+                
+
+                panel3.BackColor = Color.FromArgb(49, 49, 49);// матрица а
+                label3.BackColor = Color.FromArgb(49, 49, 49);
+                buttonAMinusСolumn.BackColor = Color.FromArgb(60, 60, 60);
+                buttonAMinusRows.BackColor = Color.FromArgb(60, 60, 60);
+                buttonAPlusСolumn.BackColor = Color.FromArgb(98, 98, 98);
+                buttonAPlusRows.BackColor = Color.FromArgb(98, 98, 98);
+                refreshA.BackColor = Color.FromArgb(129, 129, 129);
+                for (int i = 0; i < 5; i++)
+                {
+                    for (int j = 0; j < 5; j++)
+                    {
+                        arrRowsA[i, j].BackColor = Color.FromArgb(78, 78, 78);
+
+                        arrRowsA[i, j].ForeColor = Color.FromArgb(226, 239, 234);
+                    }
+                }
+
+
+
+                panel4.BackColor = Color.FromArgb(49, 49, 49);// матрица b
+                label4.BackColor = Color.FromArgb(49, 49, 49);
+                buttonBMinusСolumn.BackColor = Color.FromArgb(60, 60, 60);
+                buttonBMinusRows.BackColor = Color.FromArgb(60, 60, 60);
+                buttonBPlusСolumn.BackColor = Color.FromArgb(98, 98, 98);
+                buttonBPlusRows.BackColor = Color.FromArgb(98, 98, 98);
+                refreshB.BackColor = Color.FromArgb(69, 69, 69);
+                for (int i = 0; i < 5; i++)
+                {
+                    for (int j = 0; j < 5; j++)
+                    {
+                        arrRowsB[i, j].BackColor = Color.FromArgb(78, 78, 78);
+                        
+                        arrRowsB[i, j].ForeColor = Color.FromArgb(226, 239, 234);
+                    }
+                }
+
+                comboOperations.BackColor = Color.FromArgb(49, 49, 49);
+                result.BackColor = Color.FromArgb(49, 49, 49);
+
+                panel5.BackColor = Color.FromArgb(49, 49, 49);
+                label5.BackColor = Color.FromArgb(49, 49, 49);
+                for (int i = 0; i < 5; i++)
+                {
+                    for (int j = 0; j < 5; j++)
+                    {
+                        T_MatrixR[i, j].BackColor = Color.FromArgb(78, 78, 78);
+                        
+                        T_MatrixR[i, j].ForeColor = Color.FromArgb(226, 239, 234);
+                    }
+                }
+
+                panelSettings.BackColor = Color.FromArgb(49, 49, 49);
+                panelOperationType.BackColor = Color.FromArgb(49, 49, 49);
+                labelOperationType.BackColor = Color.FromArgb(49, 49, 49);
+
+                panel6.BackColor = Color.FromArgb(49, 49, 49);
+                label6.BackColor = Color.FromArgb(49, 49, 49);
+
+                button10.BackColor = Color.FromArgb(49, 49, 49);
+                buttonSettings.BackColor = Color.FromArgb(49, 49, 49);
+                onlineРelp.BackColor = Color.FromArgb(49, 49, 49);
+
+                panelMultiplicationType.BackColor = Color.FromArgb(49, 49, 49);
+                labelMultiplicationType.BackColor = Color.FromArgb(49, 49, 49);
+
+                panelForoneNum.BackColor = Color.FromArgb(49, 49, 49);
+                texboxForOneNum.BackColor = Color.FromArgb(78, 78, 78);
+                texboxForOneNum.ForeColor = Color.FromArgb(226, 239, 234);
+                listboxForOneNum.BackColor = Color.FromArgb(49, 49, 49);
+
+            }
+
+
+
+
+            else
+            {
+
+                this.BackColor = Color.FromArgb(1, 147, 154);// форма
+
+                panel3.BackColor = Color.FromArgb(52, 198, 205);// матрица а
+                label3.BackColor = Color.FromArgb(52, 198, 205);
+                buttonAMinusСolumn.BackColor = Color.FromArgb(0, 96, 100);
+                buttonAMinusRows.BackColor = Color.FromArgb(0, 96, 100);
+                buttonAPlusСolumn.BackColor = Color.FromArgb(93, 200, 205);
+                buttonAPlusRows.BackColor = Color.FromArgb(93, 200, 205);
+                refreshA.BackColor = Color.FromArgb(29, 112, 116);
+                for (int i = 0; i < 5; i++)
+                {
+                    for (int j = 0; j < 5; j++)
+                    {
+                        arrRowsA[i, j].BackColor = SystemColors.Window;
+                       
+                        arrRowsA[i, j].ForeColor = SystemColors.WindowText;
+                    }
+                }
+
+
+                panel4.BackColor = Color.FromArgb(52, 198, 205);// матрица b
+                label4.BackColor = Color.FromArgb(52, 198, 205);
+                buttonBMinusСolumn.BackColor = Color.FromArgb(0, 96, 100);
+                buttonBMinusRows.BackColor = Color.FromArgb(0, 96, 100);
+                buttonBPlusСolumn.BackColor = Color.FromArgb(93, 200, 205);
+                buttonBPlusRows.BackColor = Color.FromArgb(93, 200, 205);
+                refreshB.BackColor = Color.FromArgb(29, 112, 116);
+                for (int i = 0; i < 5; i++)
+                {
+                    for (int j = 0; j < 5; j++)
+                    {
+                        arrRowsB[i, j].BackColor = SystemColors.Window;
+                        
+                        arrRowsB[i, j].ForeColor = SystemColors.WindowText;
+                    }
+                }
+
+                comboOperations.BackColor = Color.FromArgb(52, 198, 205);
+                result.BackColor = Color.FromArgb(52, 198, 205);
+
+                panel5.BackColor = Color.FromArgb(52, 198, 205);
+                label5.BackColor = Color.FromArgb(52, 198, 205);
+                for (int i = 0; i < 5; i++)
+                {
+                    for (int j = 0; j < 5; j++)
+                    {
+                        T_MatrixR[i, j].BackColor = SystemColors.Window;
+                        
+                        T_MatrixR[i, j].ForeColor = SystemColors.WindowText;
+                    }
+                }
+
+                panelSettings.BackColor = Color.FromArgb(52, 198, 205);
+                panelOperationType.BackColor = Color.FromArgb(52, 198, 205);
+                labelOperationType.BackColor = Color.FromArgb(52, 198, 205);
+
+                panel6.BackColor = Color.FromArgb(52, 198, 205);
+                label6.BackColor = Color.FromArgb(52, 198, 205);
+                button10.BackColor = Color.FromArgb(52, 198, 205);
+                buttonSettings.BackColor =  Color.FromArgb(52, 198, 205);
+                onlineРelp.BackColor = Color.FromArgb(52, 198, 205);
+
+                panelMultiplicationType.BackColor = Color.FromArgb(52, 198, 205);
+                labelMultiplicationType.BackColor = Color.FromArgb(52, 198, 205);
+
+                panelForoneNum.BackColor = Color.FromArgb(52, 198, 205);
+                texboxForOneNum.BackColor = SystemColors.Window;
+                texboxForOneNum.ForeColor = SystemColors.WindowText;
+                listboxForOneNum.BackColor = Color.FromArgb(52, 198, 205);
+
+
+            }
+
+        }
+
+        
     }
-
-    
-    
-
+            
 
 }
+
+    
+
+
+
+
+
+
+
+

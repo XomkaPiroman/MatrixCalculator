@@ -29,6 +29,7 @@ namespace MatrixCalculatorAtWINFORMS
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.textBoxA5_5 = new System.Windows.Forms.TextBox();
             this.textBoxA3_3 = new System.Windows.Forms.TextBox();
             this.textBoxA5_4 = new System.Windows.Forms.TextBox();
@@ -137,6 +138,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.refreshA = new System.Windows.Forms.Button();
             this.refreshB = new System.Windows.Forms.Button();
             this.panelSettings = new System.Windows.Forms.Panel();
+            this.checkBoxForDark = new System.Windows.Forms.CheckBox();
             this.checkBoxHints = new System.Windows.Forms.CheckBox();
             this.panelMultiplicationType.SuspendLayout();
             this.panelOperationType.SuspendLayout();
@@ -1294,11 +1296,24 @@ namespace MatrixCalculatorAtWINFORMS
             // 
             this.panelSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(198)))), ((int)(((byte)(205)))));
             this.panelSettings.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelSettings.Controls.Add(this.checkBoxForDark);
             this.panelSettings.Controls.Add(this.checkBoxHints);
             this.panelSettings.Location = new System.Drawing.Point(-1, 579);
             this.panelSettings.Name = "panelSettings";
             this.panelSettings.Size = new System.Drawing.Size(1252, 50);
             this.panelSettings.TabIndex = 75;
+            // 
+            // checkBoxForDark
+            // 
+            this.checkBoxForDark.AutoSize = true;
+            this.checkBoxForDark.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBoxForDark.Location = new System.Drawing.Point(241, 5);
+            this.checkBoxForDark.Name = "checkBoxForDark";
+            this.checkBoxForDark.Size = new System.Drawing.Size(166, 34);
+            this.checkBoxForDark.TabIndex = 1;
+            this.checkBoxForDark.Text = "Тёмная тема";
+            this.checkBoxForDark.UseVisualStyleBackColor = true;
+            this.checkBoxForDark.CheckedChanged += new System.EventHandler(this.checkBoxForDark_CheckedChanged);
             // 
             // checkBoxHints
             // 
@@ -1347,6 +1362,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(239)))), ((int)(((byte)(234)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1481,6 +1497,7 @@ namespace MatrixCalculatorAtWINFORMS
         private System.Windows.Forms.Button refreshB;
         private System.Windows.Forms.Panel panelSettings;
         private System.Windows.Forms.CheckBox checkBoxHints;
+        private System.Windows.Forms.CheckBox checkBoxForDark;
     }
 }
 

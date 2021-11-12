@@ -34,5 +34,17 @@ namespace MatrixCalculatorAtWINFORMS.Properties {
                 this["checkBoxHints"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool checkBoxForDark {
+            get {
+                return ((bool)(this["checkBoxForDark"]));
+            }
+            set {
+                this["checkBoxForDark"] = value;
+            }
+        }
     }
 }
