@@ -997,31 +997,42 @@ namespace MatrixCalculatorAtWINFORMS
                             }
                         case 2:
                             {
-                                if (counterColumnsA == 1 && counterRowsA == 1 )
+                                if (counterColumnsA == 1 && counterRowsA == 1)
 
-                                {
-                                    MessageBox.Show("Вижу у вас где-то одинокая циферка. Лучше воспользуйтесь типом умножения [A]×[n]",
-                                                "Калькулятор матриц", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                }
-                                if(counterColumnsB == 1 && counterRowsB == 1)
                                 {
                                     MessageBox.Show("Вижу у вас где-то одинокая циферка. Лучше воспользуйтесь типом умножения [A]×[n]",
                                                 "Калькулятор матриц", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 }
                                 else
                                 {
-                                    if (radioButtonMultiplicationType1.Checked == true)
+                                    if (counterColumnsB == 1 && counterRowsB == 1)
                                     {
-                                        ClearMatrixR();
-                                        MatrixA_Multiplication_MatrixB();
-                                        ChangeOfZizeMatrixR();
+                                        MessageBox.Show("Вижу у вас где-то одинокая циферка. Лучше воспользуйтесь типом умножения [A]×[n]",
+                                                    "Калькулятор матриц", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     }
-                                    if (radioButtonMultiplicationType2.Checked == true)
+                                    else
                                     {
-                                        ClearMatrixR();
-                                        MatrixA_Multiplication_Nums();
-                                        ChangeOfZizeMatrixR();
+                                        if (radioButtonMultiplicationType1.Checked == true)
+                                        {
+                                            ClearMatrixR();
+                                            for(int i=0; i <5;i++)
+                                            {
+                                                for(int j = 0; j <5; j++)
+                                                {
+                                                    MatrixR[i, j] = 0;
+                                                }
+                                            }
+                                            MatrixA_Multiplication_MatrixB();
+                                            ChangeOfZizeMatrixR();
+                                        }
+                                        if (radioButtonMultiplicationType2.Checked == true)
+                                        {
+                                            ClearMatrixR();
+                                            MatrixA_Multiplication_Nums();
+                                            ChangeOfZizeMatrixR();
+                                        }
                                     }
+                                    
                                 }
                                 break;
                             }
@@ -1062,6 +1073,7 @@ namespace MatrixCalculatorAtWINFORMS
                 MessageBox.Show("Заполните все поля",
                                 "Калькулятор матриц", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        
         }
 
         private void MatrixA_Plus_MatrixB()//сложение мариц
@@ -1209,22 +1221,30 @@ namespace MatrixCalculatorAtWINFORMS
         }
         private void button10_Click(object sender, EventArgs e)
         {
-            string resultCopy = "";
-            for (int i = 0; i < 5; i++)
+            if (T_MatrixR[0, 0].Text == "")
             {
-                for (int j = 0; j < 5; j++)
-                {
-                    if (T_MatrixR[i, j].Text != "")
-                    {
-                        resultCopy += $"{ T_MatrixR[i, j].Text} ";
-                    }
-
-                }
-                resultCopy += "\n";
+                MessageBox.Show("Результата нет. Что копировать то?",
+                            "Калькулятор матриц", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            else
+            {
+                string resultCopy = "";
+                for (int i = 0; i < 5; i++)
+                {
+                    for (int j = 0; j < 5; j++)
+                    {
+                        if (T_MatrixR[i, j].Text != "")
+                        {
+                            resultCopy += $"{ T_MatrixR[i, j].Text} ";
+                        }
 
-            Clipboard.Clear();
-            Clipboard.SetText(resultCopy);
+                    }
+                    resultCopy += "\n";
+                }
+
+                Clipboard.Clear();
+                Clipboard.SetText(resultCopy);
+            }
         }
 
         private void button11_Click(object sender, EventArgs e)
