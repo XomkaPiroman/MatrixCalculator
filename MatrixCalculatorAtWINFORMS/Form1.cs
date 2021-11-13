@@ -56,36 +56,46 @@ namespace MatrixCalculatorAtWINFORMS
         private void FillingMatrixA()
         {
 
+           
             for (int i = 0; i < counterRowsA; i++)
             {
                 for (int j = 0; j < counterColumnsA; j++)
                 {
-                    MatrixA[i, j] = Convert.ToDouble(arrRowsA[i, j].Text.Replace('.', ','));
+                    
+                    
+                   
+                    
+                    
+                    
+                        MatrixA[i, j] = Convert.ToDouble(arrRowsA[i, j].Text.Replace('.', ','));
+                    
+                    
+
                 }
             }
         }
         private void FillingMatrixB()
         {
+            
+
+            
 
             for (int i = 0; i < counterRowsB; i++)
             {
                 for (int j = 0; j < counterColumnsB; j++)
                 {
-                    MatrixB[i, j] = Convert.ToDouble(arrRowsB[i, j].Text.Replace('.', ',')); ;
+
+                    
+                    
+                        MatrixB[i, j] = Convert.ToDouble(arrRowsB[i, j].Text.Replace('.', ','));
+                    
+                    
+                    
                 }
             }
         }
 
-        private void OutMatrixR()
-        {
-            for (int i = 0; i < counterRowsB; i++)
-            {
-                for (int j = 0; j < counterColumnsB; j++)
-                {
-                    MatrixR[i, j] = MatrixB[i, j];
-                }
-            }
-        }
+       
 
         private void WriteMatrixR()
         {
@@ -1070,8 +1080,9 @@ namespace MatrixCalculatorAtWINFORMS
             }
             catch
             {
-                MessageBox.Show("Warning",
-                                "Калькулятор матриц", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                   
+                    MessageBox.Show("Заполните все поля цифрами.",
+                                "Калькулятор матриц", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         
         }
