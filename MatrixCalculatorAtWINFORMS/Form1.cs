@@ -1363,6 +1363,7 @@ namespace MatrixCalculatorAtWINFORMS
                 texboxForOneNum.BackColor = Color.FromArgb(78, 78, 78);
                 texboxForOneNum.ForeColor = Color.FromArgb(226, 239, 234);
                 listboxForOneNum.BackColor = Color.FromArgb(49, 49, 49);
+                button1.BackColor = Color.FromArgb(98, 98, 98);
 
             }
 
@@ -1441,13 +1442,38 @@ namespace MatrixCalculatorAtWINFORMS
                 texboxForOneNum.BackColor = SystemColors.Window;
                 texboxForOneNum.ForeColor = SystemColors.WindowText;
                 listboxForOneNum.BackColor = Color.FromArgb(52, 198, 205);
-
+                button1.BackColor = Color.FromArgb(93, 200, 205);
 
             }
 
         }
 
-        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (T_MatrixR[0, 0].Text == "")
+            {
+                MessageBox.Show("Результата нет. Что копировать то?",
+                            "Калькулятор матриц", MessageBoxButtons.OK, MessageBoxIcon.Question);
+            }
+            else
+            {
+                
+                for (int i = 0; i < 5; i++)
+                {
+                    for (int j = 0; j < 5; j++)
+                    {
+                        if (T_MatrixR[i, j].Text != "")
+                        {
+                            arrRowsA[i,j].Text = T_MatrixR[i,j].Text;
+                        }
+
+                    }
+                    
+                }
+
+                
+            }
+        }
     }
             
 

@@ -140,6 +140,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.panelSettings = new System.Windows.Forms.Panel();
             this.checkBoxForDark = new System.Windows.Forms.CheckBox();
             this.checkBoxHints = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelMultiplicationType.SuspendLayout();
             this.panelOperationType.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -1267,6 +1268,7 @@ namespace MatrixCalculatorAtWINFORMS
             // refreshA
             // 
             this.refreshA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(112)))), ((int)(((byte)(116)))));
+            this.refreshA.Cursor = System.Windows.Forms.Cursors.Hand;
             this.refreshA.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.refreshA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.refreshA.Font = new System.Drawing.Font("Segoe UI", 8F);
@@ -1281,6 +1283,7 @@ namespace MatrixCalculatorAtWINFORMS
             // refreshB
             // 
             this.refreshB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(112)))), ((int)(((byte)(116)))));
+            this.refreshB.Cursor = System.Windows.Forms.Cursors.Hand;
             this.refreshB.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.refreshB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.refreshB.Font = new System.Drawing.Font("Segoe UI", 8F);
@@ -1306,6 +1309,7 @@ namespace MatrixCalculatorAtWINFORMS
             // checkBoxForDark
             // 
             this.checkBoxForDark.AutoSize = true;
+            this.checkBoxForDark.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBoxForDark.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.checkBoxForDark.Location = new System.Drawing.Point(241, 5);
             this.checkBoxForDark.Name = "checkBoxForDark";
@@ -1318,6 +1322,7 @@ namespace MatrixCalculatorAtWINFORMS
             // checkBoxHints
             // 
             this.checkBoxHints.AutoSize = true;
+            this.checkBoxHints.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBoxHints.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.checkBoxHints.Location = new System.Drawing.Point(12, 5);
             this.checkBoxHints.Name = "checkBoxHints";
@@ -1327,12 +1332,28 @@ namespace MatrixCalculatorAtWINFORMS
             this.checkBoxHints.UseVisualStyleBackColor = true;
             this.checkBoxHints.CheckedChanged += new System.EventHandler(this.checkBoxHints_CheckedChanged);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(200)))), ((int)(((byte)(205)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(1025, 9);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(164, 34);
+            this.button1.TabIndex = 76;
+            this.button1.Text = "Копировать в А";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(147)))), ((int)(((byte)(154)))));
             this.ClientSize = new System.Drawing.Size(1249, 629);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.panelSettings);
             this.Controls.Add(this.refreshB);
             this.Controls.Add(this.refreshA);
@@ -1498,6 +1519,7 @@ namespace MatrixCalculatorAtWINFORMS
         private System.Windows.Forms.Panel panelSettings;
         private System.Windows.Forms.CheckBox checkBoxHints;
         private System.Windows.Forms.CheckBox checkBoxForDark;
+        private System.Windows.Forms.Button button1;
     }
 }
 
