@@ -138,10 +138,10 @@ namespace MatrixCalculatorAtWINFORMS
             this.refreshA = new System.Windows.Forms.Button();
             this.refreshB = new System.Windows.Forms.Button();
             this.panelSettings = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.checkBoxForDark = new System.Windows.Forms.CheckBox();
             this.checkBoxHints = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelMultiplicationType.SuspendLayout();
             this.panelOperationType.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -183,6 +183,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxA1_1.Name = "textBoxA1_1";
             this.textBoxA1_1.Size = new System.Drawing.Size(57, 45);
             this.textBoxA1_1.TabIndex = 25;
+            this.textBoxA1_1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Next_textbox_KeyPress);
             // 
             // textBoxA5_3
             // 
@@ -1309,6 +1310,22 @@ namespace MatrixCalculatorAtWINFORMS
             this.panelSettings.Size = new System.Drawing.Size(1252, 50);
             this.panelSettings.TabIndex = 75;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Help;
+            this.pictureBox1.Image = global::MatrixCalculatorAtWINFORMS.Properties.Resources.help3;
+            this.pictureBox1.InitialImage = null;
+            this.pictureBox1.Location = new System.Drawing.Point(1205, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // checkBoxForDark
             // 
             this.checkBoxForDark.AutoSize = true;
@@ -1349,22 +1366,6 @@ namespace MatrixCalculatorAtWINFORMS
             this.button1.Text = "Копировать в А";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Help;
-            this.pictureBox1.Image = global::MatrixCalculatorAtWINFORMS.Properties.Resources.help3;
-            this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(1205, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Form1
             // 

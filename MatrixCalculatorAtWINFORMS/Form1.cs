@@ -972,7 +972,7 @@ namespace MatrixCalculatorAtWINFORMS
             {
                 for (int j = 0; j < 5; j++)
                 {
-                    //MatrixR[i, j] = 0.0;
+                    
                     T_MatrixR[i, j].Text = "";
                 }
 
@@ -1480,8 +1480,28 @@ namespace MatrixCalculatorAtWINFORMS
             Form2 form2 = new Form2();
             form2.Show();
         }
+
+        private void Next_textbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char) Keys.Enter)
+            {
+                bool check = false;
+                for(int i = 0; i < counterRowsA && check == false; i++)
+                {
+                    for(int j = 0; j < counterColumnsA && check == false; j++)
+                    {
+                        arrRowsA[i, j].Focus();
+                        check = true;
+                    }
+                }
+
+            }
+        }
+
+       
     }
-            
+
+   
 
 }
 
