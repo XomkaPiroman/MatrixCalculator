@@ -158,7 +158,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxA5_5.Location = new System.Drawing.Point(263, 219);
             this.textBoxA5_5.Name = "textBoxA5_5";
             this.textBoxA5_5.Size = new System.Drawing.Size(57, 45);
-            this.textBoxA5_5.TabIndex = 49;
+            this.textBoxA5_5.TabIndex = 25;
             // 
             // textBoxA3_3
             // 
@@ -166,7 +166,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxA3_3.Location = new System.Drawing.Point(137, 119);
             this.textBoxA3_3.Name = "textBoxA3_3";
             this.textBoxA3_3.Size = new System.Drawing.Size(57, 45);
-            this.textBoxA3_3.TabIndex = 37;
+            this.textBoxA3_3.TabIndex = 13;
             // 
             // textBoxA5_4
             // 
@@ -174,7 +174,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxA5_4.Location = new System.Drawing.Point(200, 219);
             this.textBoxA5_4.Name = "textBoxA5_4";
             this.textBoxA5_4.Size = new System.Drawing.Size(57, 45);
-            this.textBoxA5_4.TabIndex = 48;
+            this.textBoxA5_4.TabIndex = 24;
             // 
             // textBoxA1_1
             // 
@@ -182,8 +182,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxA1_1.Location = new System.Drawing.Point(11, 19);
             this.textBoxA1_1.Name = "textBoxA1_1";
             this.textBoxA1_1.Size = new System.Drawing.Size(57, 45);
-            this.textBoxA1_1.TabIndex = 25;
-            this.textBoxA1_1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Next_textbox_KeyPress);
+            this.textBoxA1_1.TabIndex = 1;
             // 
             // textBoxA5_3
             // 
@@ -191,7 +190,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxA5_3.Location = new System.Drawing.Point(137, 219);
             this.textBoxA5_3.Name = "textBoxA5_3";
             this.textBoxA5_3.Size = new System.Drawing.Size(57, 45);
-            this.textBoxA5_3.TabIndex = 47;
+            this.textBoxA5_3.TabIndex = 23;
             // 
             // textBoxA1_2
             // 
@@ -199,7 +198,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxA1_2.Location = new System.Drawing.Point(74, 19);
             this.textBoxA1_2.Name = "textBoxA1_2";
             this.textBoxA1_2.Size = new System.Drawing.Size(57, 45);
-            this.textBoxA1_2.TabIndex = 26;
+            this.textBoxA1_2.TabIndex = 2;
             // 
             // textBoxA5_2
             // 
@@ -207,7 +206,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxA5_2.Location = new System.Drawing.Point(74, 219);
             this.textBoxA5_2.Name = "textBoxA5_2";
             this.textBoxA5_2.Size = new System.Drawing.Size(57, 45);
-            this.textBoxA5_2.TabIndex = 46;
+            this.textBoxA5_2.TabIndex = 22;
             // 
             // textBoxA1_3
             // 
@@ -215,7 +214,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxA1_3.Location = new System.Drawing.Point(137, 19);
             this.textBoxA1_3.Name = "textBoxA1_3";
             this.textBoxA1_3.Size = new System.Drawing.Size(57, 45);
-            this.textBoxA1_3.TabIndex = 27;
+            this.textBoxA1_3.TabIndex = 3;
             // 
             // textBoxA5_1
             // 
@@ -223,7 +222,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxA5_1.Location = new System.Drawing.Point(11, 219);
             this.textBoxA5_1.Name = "textBoxA5_1";
             this.textBoxA5_1.Size = new System.Drawing.Size(57, 45);
-            this.textBoxA5_1.TabIndex = 45;
+            this.textBoxA5_1.TabIndex = 21;
             // 
             // textBoxA2_1
             // 
@@ -231,7 +230,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxA2_1.Location = new System.Drawing.Point(11, 69);
             this.textBoxA2_1.Name = "textBoxA2_1";
             this.textBoxA2_1.Size = new System.Drawing.Size(57, 45);
-            this.textBoxA2_1.TabIndex = 28;
+            this.textBoxA2_1.TabIndex = 6;
             // 
             // textBoxA4_5
             // 
@@ -239,7 +238,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxA4_5.Location = new System.Drawing.Point(263, 169);
             this.textBoxA4_5.Name = "textBoxA4_5";
             this.textBoxA4_5.Size = new System.Drawing.Size(57, 45);
-            this.textBoxA4_5.TabIndex = 44;
+            this.textBoxA4_5.TabIndex = 20;
             // 
             // textBoxA2_2
             // 
@@ -247,7 +246,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxA2_2.Location = new System.Drawing.Point(74, 69);
             this.textBoxA2_2.Name = "textBoxA2_2";
             this.textBoxA2_2.Size = new System.Drawing.Size(57, 45);
-            this.textBoxA2_2.TabIndex = 29;
+            this.textBoxA2_2.TabIndex = 7;
             // 
             // textBoxA4_4
             // 
@@ -255,7 +254,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxA4_4.Location = new System.Drawing.Point(200, 169);
             this.textBoxA4_4.Name = "textBoxA4_4";
             this.textBoxA4_4.Size = new System.Drawing.Size(57, 45);
-            this.textBoxA4_4.TabIndex = 43;
+            this.textBoxA4_4.TabIndex = 19;
             // 
             // textBoxA2_3
             // 
@@ -263,7 +262,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxA2_3.Location = new System.Drawing.Point(137, 69);
             this.textBoxA2_3.Name = "textBoxA2_3";
             this.textBoxA2_3.Size = new System.Drawing.Size(57, 45);
-            this.textBoxA2_3.TabIndex = 30;
+            this.textBoxA2_3.TabIndex = 8;
             // 
             // textBoxA4_3
             // 
@@ -271,7 +270,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxA4_3.Location = new System.Drawing.Point(137, 169);
             this.textBoxA4_3.Name = "textBoxA4_3";
             this.textBoxA4_3.Size = new System.Drawing.Size(57, 45);
-            this.textBoxA4_3.TabIndex = 42;
+            this.textBoxA4_3.TabIndex = 18;
             // 
             // textBoxA1_4
             // 
@@ -279,7 +278,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxA1_4.Location = new System.Drawing.Point(200, 19);
             this.textBoxA1_4.Name = "textBoxA1_4";
             this.textBoxA1_4.Size = new System.Drawing.Size(57, 45);
-            this.textBoxA1_4.TabIndex = 31;
+            this.textBoxA1_4.TabIndex = 4;
             // 
             // textBoxA4_2
             // 
@@ -287,7 +286,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxA4_2.Location = new System.Drawing.Point(74, 169);
             this.textBoxA4_2.Name = "textBoxA4_2";
             this.textBoxA4_2.Size = new System.Drawing.Size(57, 45);
-            this.textBoxA4_2.TabIndex = 41;
+            this.textBoxA4_2.TabIndex = 17;
             // 
             // textBoxA1_5
             // 
@@ -295,7 +294,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxA1_5.Location = new System.Drawing.Point(263, 19);
             this.textBoxA1_5.Name = "textBoxA1_5";
             this.textBoxA1_5.Size = new System.Drawing.Size(57, 45);
-            this.textBoxA1_5.TabIndex = 32;
+            this.textBoxA1_5.TabIndex = 5;
             // 
             // textBoxA4_1
             // 
@@ -303,7 +302,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxA4_1.Location = new System.Drawing.Point(11, 169);
             this.textBoxA4_1.Name = "textBoxA4_1";
             this.textBoxA4_1.Size = new System.Drawing.Size(57, 45);
-            this.textBoxA4_1.TabIndex = 40;
+            this.textBoxA4_1.TabIndex = 16;
             // 
             // textBoxA2_4
             // 
@@ -311,7 +310,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxA2_4.Location = new System.Drawing.Point(200, 69);
             this.textBoxA2_4.Name = "textBoxA2_4";
             this.textBoxA2_4.Size = new System.Drawing.Size(57, 45);
-            this.textBoxA2_4.TabIndex = 33;
+            this.textBoxA2_4.TabIndex = 9;
             // 
             // textBoxA3_5
             // 
@@ -319,7 +318,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxA3_5.Location = new System.Drawing.Point(263, 119);
             this.textBoxA3_5.Name = "textBoxA3_5";
             this.textBoxA3_5.Size = new System.Drawing.Size(57, 45);
-            this.textBoxA3_5.TabIndex = 39;
+            this.textBoxA3_5.TabIndex = 15;
             // 
             // textBoxA2_5
             // 
@@ -327,7 +326,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxA2_5.Location = new System.Drawing.Point(263, 69);
             this.textBoxA2_5.Name = "textBoxA2_5";
             this.textBoxA2_5.Size = new System.Drawing.Size(57, 45);
-            this.textBoxA2_5.TabIndex = 34;
+            this.textBoxA2_5.TabIndex = 10;
             // 
             // textBoxA3_4
             // 
@@ -335,7 +334,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxA3_4.Location = new System.Drawing.Point(200, 119);
             this.textBoxA3_4.Name = "textBoxA3_4";
             this.textBoxA3_4.Size = new System.Drawing.Size(57, 45);
-            this.textBoxA3_4.TabIndex = 38;
+            this.textBoxA3_4.TabIndex = 14;
             // 
             // textBoxA3_1
             // 
@@ -343,7 +342,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxA3_1.Location = new System.Drawing.Point(11, 119);
             this.textBoxA3_1.Name = "textBoxA3_1";
             this.textBoxA3_1.Size = new System.Drawing.Size(57, 45);
-            this.textBoxA3_1.TabIndex = 35;
+            this.textBoxA3_1.TabIndex = 11;
             // 
             // textBoxA3_2
             // 
@@ -351,7 +350,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxA3_2.Location = new System.Drawing.Point(74, 119);
             this.textBoxA3_2.Name = "textBoxA3_2";
             this.textBoxA3_2.Size = new System.Drawing.Size(57, 45);
-            this.textBoxA3_2.TabIndex = 36;
+            this.textBoxA3_2.TabIndex = 12;
             // 
             // comboOperations
             // 
@@ -370,7 +369,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.comboOperations.Location = new System.Drawing.Point(408, 147);
             this.comboOperations.Name = "comboOperations";
             this.comboOperations.Size = new System.Drawing.Size(69, 53);
-            this.comboOperations.TabIndex = 3;
+            this.comboOperations.TabIndex = 53;
             this.comboOperations.SelectedIndexChanged += new System.EventHandler(this.comboOperations_SelectedIndexChanged);
             // 
             // radioButtonMultiplicationType1
@@ -604,7 +603,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxB5_5.Location = new System.Drawing.Point(263, 219);
             this.textBoxB5_5.Name = "textBoxB5_5";
             this.textBoxB5_5.Size = new System.Drawing.Size(57, 45);
-            this.textBoxB5_5.TabIndex = 49;
+            this.textBoxB5_5.TabIndex = 50;
             // 
             // textBoxB1_1
             // 
@@ -612,7 +611,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxB1_1.Location = new System.Drawing.Point(11, 19);
             this.textBoxB1_1.Name = "textBoxB1_1";
             this.textBoxB1_1.Size = new System.Drawing.Size(57, 45);
-            this.textBoxB1_1.TabIndex = 25;
+            this.textBoxB1_1.TabIndex = 26;
             // 
             // textBoxB3_3
             // 
@@ -620,7 +619,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxB3_3.Location = new System.Drawing.Point(137, 119);
             this.textBoxB3_3.Name = "textBoxB3_3";
             this.textBoxB3_3.Size = new System.Drawing.Size(57, 45);
-            this.textBoxB3_3.TabIndex = 37;
+            this.textBoxB3_3.TabIndex = 38;
             // 
             // textBoxB3_2
             // 
@@ -628,7 +627,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxB3_2.Location = new System.Drawing.Point(74, 119);
             this.textBoxB3_2.Name = "textBoxB3_2";
             this.textBoxB3_2.Size = new System.Drawing.Size(57, 45);
-            this.textBoxB3_2.TabIndex = 36;
+            this.textBoxB3_2.TabIndex = 37;
             // 
             // textBoxB5_4
             // 
@@ -636,7 +635,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxB5_4.Location = new System.Drawing.Point(200, 219);
             this.textBoxB5_4.Name = "textBoxB5_4";
             this.textBoxB5_4.Size = new System.Drawing.Size(57, 45);
-            this.textBoxB5_4.TabIndex = 48;
+            this.textBoxB5_4.TabIndex = 49;
             // 
             // textBoxB3_1
             // 
@@ -644,7 +643,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxB3_1.Location = new System.Drawing.Point(11, 119);
             this.textBoxB3_1.Name = "textBoxB3_1";
             this.textBoxB3_1.Size = new System.Drawing.Size(57, 45);
-            this.textBoxB3_1.TabIndex = 35;
+            this.textBoxB3_1.TabIndex = 36;
             // 
             // textBoxB3_4
             // 
@@ -652,7 +651,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxB3_4.Location = new System.Drawing.Point(200, 119);
             this.textBoxB3_4.Name = "textBoxB3_4";
             this.textBoxB3_4.Size = new System.Drawing.Size(57, 45);
-            this.textBoxB3_4.TabIndex = 38;
+            this.textBoxB3_4.TabIndex = 39;
             // 
             // textBoxB5_3
             // 
@@ -660,7 +659,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxB5_3.Location = new System.Drawing.Point(137, 219);
             this.textBoxB5_3.Name = "textBoxB5_3";
             this.textBoxB5_3.Size = new System.Drawing.Size(57, 45);
-            this.textBoxB5_3.TabIndex = 47;
+            this.textBoxB5_3.TabIndex = 48;
             // 
             // textBoxB2_5
             // 
@@ -668,7 +667,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxB2_5.Location = new System.Drawing.Point(263, 69);
             this.textBoxB2_5.Name = "textBoxB2_5";
             this.textBoxB2_5.Size = new System.Drawing.Size(57, 45);
-            this.textBoxB2_5.TabIndex = 34;
+            this.textBoxB2_5.TabIndex = 35;
             // 
             // textBoxB1_2
             // 
@@ -676,7 +675,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxB1_2.Location = new System.Drawing.Point(74, 19);
             this.textBoxB1_2.Name = "textBoxB1_2";
             this.textBoxB1_2.Size = new System.Drawing.Size(57, 45);
-            this.textBoxB1_2.TabIndex = 26;
+            this.textBoxB1_2.TabIndex = 27;
             // 
             // textBoxB3_5
             // 
@@ -684,7 +683,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxB3_5.Location = new System.Drawing.Point(263, 119);
             this.textBoxB3_5.Name = "textBoxB3_5";
             this.textBoxB3_5.Size = new System.Drawing.Size(57, 45);
-            this.textBoxB3_5.TabIndex = 39;
+            this.textBoxB3_5.TabIndex = 40;
             // 
             // textBoxB5_2
             // 
@@ -692,7 +691,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxB5_2.Location = new System.Drawing.Point(74, 219);
             this.textBoxB5_2.Name = "textBoxB5_2";
             this.textBoxB5_2.Size = new System.Drawing.Size(57, 45);
-            this.textBoxB5_2.TabIndex = 46;
+            this.textBoxB5_2.TabIndex = 47;
             // 
             // textBoxB2_4
             // 
@@ -700,7 +699,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxB2_4.Location = new System.Drawing.Point(200, 69);
             this.textBoxB2_4.Name = "textBoxB2_4";
             this.textBoxB2_4.Size = new System.Drawing.Size(57, 45);
-            this.textBoxB2_4.TabIndex = 33;
+            this.textBoxB2_4.TabIndex = 34;
             // 
             // textBoxB1_3
             // 
@@ -708,7 +707,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxB1_3.Location = new System.Drawing.Point(137, 19);
             this.textBoxB1_3.Name = "textBoxB1_3";
             this.textBoxB1_3.Size = new System.Drawing.Size(57, 45);
-            this.textBoxB1_3.TabIndex = 27;
+            this.textBoxB1_3.TabIndex = 28;
             // 
             // textBoxB4_1
             // 
@@ -716,7 +715,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxB4_1.Location = new System.Drawing.Point(11, 169);
             this.textBoxB4_1.Name = "textBoxB4_1";
             this.textBoxB4_1.Size = new System.Drawing.Size(57, 45);
-            this.textBoxB4_1.TabIndex = 40;
+            this.textBoxB4_1.TabIndex = 41;
             // 
             // textBoxB5_1
             // 
@@ -724,7 +723,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxB5_1.Location = new System.Drawing.Point(11, 219);
             this.textBoxB5_1.Name = "textBoxB5_1";
             this.textBoxB5_1.Size = new System.Drawing.Size(57, 45);
-            this.textBoxB5_1.TabIndex = 45;
+            this.textBoxB5_1.TabIndex = 46;
             // 
             // textBoxB1_5
             // 
@@ -732,7 +731,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxB1_5.Location = new System.Drawing.Point(263, 19);
             this.textBoxB1_5.Name = "textBoxB1_5";
             this.textBoxB1_5.Size = new System.Drawing.Size(57, 45);
-            this.textBoxB1_5.TabIndex = 32;
+            this.textBoxB1_5.TabIndex = 30;
             // 
             // textBoxB2_1
             // 
@@ -740,7 +739,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxB2_1.Location = new System.Drawing.Point(11, 69);
             this.textBoxB2_1.Name = "textBoxB2_1";
             this.textBoxB2_1.Size = new System.Drawing.Size(57, 45);
-            this.textBoxB2_1.TabIndex = 28;
+            this.textBoxB2_1.TabIndex = 31;
             // 
             // textBoxB4_2
             // 
@@ -748,7 +747,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxB4_2.Location = new System.Drawing.Point(74, 169);
             this.textBoxB4_2.Name = "textBoxB4_2";
             this.textBoxB4_2.Size = new System.Drawing.Size(57, 45);
-            this.textBoxB4_2.TabIndex = 41;
+            this.textBoxB4_2.TabIndex = 42;
             // 
             // textBoxB4_5
             // 
@@ -756,7 +755,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxB4_5.Location = new System.Drawing.Point(263, 169);
             this.textBoxB4_5.Name = "textBoxB4_5";
             this.textBoxB4_5.Size = new System.Drawing.Size(57, 45);
-            this.textBoxB4_5.TabIndex = 44;
+            this.textBoxB4_5.TabIndex = 45;
             // 
             // textBoxB1_4
             // 
@@ -764,7 +763,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxB1_4.Location = new System.Drawing.Point(200, 19);
             this.textBoxB1_4.Name = "textBoxB1_4";
             this.textBoxB1_4.Size = new System.Drawing.Size(57, 45);
-            this.textBoxB1_4.TabIndex = 31;
+            this.textBoxB1_4.TabIndex = 29;
             // 
             // textBoxB2_2
             // 
@@ -772,7 +771,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxB2_2.Location = new System.Drawing.Point(74, 69);
             this.textBoxB2_2.Name = "textBoxB2_2";
             this.textBoxB2_2.Size = new System.Drawing.Size(57, 45);
-            this.textBoxB2_2.TabIndex = 29;
+            this.textBoxB2_2.TabIndex = 32;
             // 
             // textBoxB4_3
             // 
@@ -780,7 +779,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxB4_3.Location = new System.Drawing.Point(137, 169);
             this.textBoxB4_3.Name = "textBoxB4_3";
             this.textBoxB4_3.Size = new System.Drawing.Size(57, 45);
-            this.textBoxB4_3.TabIndex = 42;
+            this.textBoxB4_3.TabIndex = 43;
             // 
             // textBoxB4_4
             // 
@@ -788,7 +787,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxB4_4.Location = new System.Drawing.Point(200, 169);
             this.textBoxB4_4.Name = "textBoxB4_4";
             this.textBoxB4_4.Size = new System.Drawing.Size(57, 45);
-            this.textBoxB4_4.TabIndex = 43;
+            this.textBoxB4_4.TabIndex = 44;
             // 
             // textBoxB2_3
             // 
@@ -796,7 +795,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.textBoxB2_3.Location = new System.Drawing.Point(137, 69);
             this.textBoxB2_3.Name = "textBoxB2_3";
             this.textBoxB2_3.Size = new System.Drawing.Size(57, 45);
-            this.textBoxB2_3.TabIndex = 30;
+            this.textBoxB2_3.TabIndex = 33;
             // 
             // label5
             // 
@@ -1237,7 +1236,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.onlineРelp.Location = new System.Drawing.Point(11, 98);
             this.onlineРelp.Name = "onlineРelp";
             this.onlineРelp.Size = new System.Drawing.Size(309, 41);
-            this.onlineРelp.TabIndex = 2;
+            this.onlineРelp.TabIndex = 52;
             this.onlineРelp.Text = "Открыть справку в интернете";
             this.onlineРelp.UseVisualStyleBackColor = false;
             this.onlineРelp.Click += new System.EventHandler(this.onlineHelp_Click);
@@ -1250,7 +1249,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.buttonSettings.Location = new System.Drawing.Point(11, 56);
             this.buttonSettings.Name = "buttonSettings";
             this.buttonSettings.Size = new System.Drawing.Size(309, 41);
-            this.buttonSettings.TabIndex = 1;
+            this.buttonSettings.TabIndex = 51;
             this.buttonSettings.Text = "Настройки";
             this.buttonSettings.UseVisualStyleBackColor = false;
             this.buttonSettings.Click += new System.EventHandler(this.button11_Click);
@@ -1263,7 +1262,7 @@ namespace MatrixCalculatorAtWINFORMS
             this.button10.Location = new System.Drawing.Point(11, 13);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(309, 41);
-            this.button10.TabIndex = 0;
+            this.button10.TabIndex = 50;
             this.button10.Text = "Копировать результат";
             this.button10.UseVisualStyleBackColor = false;
             this.button10.Click += new System.EventHandler(this.button10_Click);
