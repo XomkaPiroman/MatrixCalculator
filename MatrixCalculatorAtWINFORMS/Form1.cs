@@ -1,17 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MatrixCalculatorAtWINFORMS
 {
     public partial class Form1 : Form
     {
+       
+
         static private int counterColumnsA = 5;
         static private int counterRowsA = 5;
 
@@ -21,6 +17,8 @@ namespace MatrixCalculatorAtWINFORMS
         static private int counterColumnsR = 5;
         static private int counterRowsR = 5;
 
+
+        
 
 
         TextBox[,] arrСolumnsA;// массив столбцов матрицы А
@@ -39,17 +37,14 @@ namespace MatrixCalculatorAtWINFORMS
 
         TextBox[,] T_MatrixR = new TextBox[counterColumnsR, counterRowsR];
 
-
+        static public int Begin_AH = 0;
 
 
 
         public Form1()
         {
             InitializeComponent();
-            //comboOperations.SelectedIndex = 0;
-
-
-
+            
         }
 
 
@@ -63,10 +58,6 @@ namespace MatrixCalculatorAtWINFORMS
                 {
                     
                     
-                   
-                    
-                    
-                    
                         MatrixA[i, j] = Convert.ToDouble(arrRowsA[i, j].Text.Replace('.', ','));
                     
                     
@@ -75,22 +66,12 @@ namespace MatrixCalculatorAtWINFORMS
             }
         }
         private void FillingMatrixB()
-        {
-            
-
-            
-
+        {  
             for (int i = 0; i < counterRowsB; i++)
             {
                 for (int j = 0; j < counterColumnsB; j++)
                 {
-
-                    
-                    
-                        MatrixB[i, j] = Convert.ToDouble(arrRowsB[i, j].Text.Replace('.', ','));
-                    
-                    
-                    
+                  MatrixB[i, j] = Convert.ToDouble(arrRowsB[i, j].Text.Replace('.', ','));                    
                 }
             }
         }
@@ -103,7 +84,7 @@ namespace MatrixCalculatorAtWINFORMS
             {
                 for (int j = 0; j < counterColumnsA; j++)
                 {
-                    T_MatrixR[i, j].Text = Convert.ToString(MatrixR[i, j]);
+                   T_MatrixR[i, j].Text = Convert.ToString(MatrixR[i, j]);
                 }
             }
         }
@@ -123,9 +104,7 @@ namespace MatrixCalculatorAtWINFORMS
 
         private void Form1_Load(object sender, EventArgs e)//действия при загрузке формы
         {
-            this.Size = new Size(850, 420);
-            
-
+            this.Size = new Size(850, 420); 
 
 
             arrСolumnsA = new TextBox[,] { { textBoxA1_1, textBoxA2_1, textBoxA3_1, textBoxA4_1, textBoxA5_1 },// столбцы матрицы А
@@ -186,9 +165,9 @@ namespace MatrixCalculatorAtWINFORMS
                 Visible = false
 
             };
+
             this.Controls.Add(texboxForOneNum);
             texboxForOneNum.BringToFront();
-
 
             listboxForOneNum = new Label
             {
@@ -273,7 +252,6 @@ namespace MatrixCalculatorAtWINFORMS
         }
         private void onlineHelp_Click(object sender, EventArgs e)//открываем справку в интернете в соответсвии со знаком
         {
-
             switch (comboOperations.SelectedIndex)
             {
                 case 0:
@@ -305,8 +283,6 @@ namespace MatrixCalculatorAtWINFORMS
                         break;
                     }
             }
-
-
         }
 
         private void buttonAMinusСolumn_Click(object sender, EventArgs e)// уменьшение столбцов матрицы А
@@ -432,8 +408,6 @@ namespace MatrixCalculatorAtWINFORMS
 
                         break;
                     }
-
-
             }
         }
 
@@ -553,11 +527,6 @@ namespace MatrixCalculatorAtWINFORMS
                         }
                         break;
                     }
-
-
-
-
-
             }
         }
 
@@ -682,8 +651,6 @@ namespace MatrixCalculatorAtWINFORMS
                         }
                         break;
                     }
-
-
             }
         }
 
@@ -801,7 +768,6 @@ namespace MatrixCalculatorAtWINFORMS
                         }
                         break;
                     }
-
             }
         }
 
@@ -830,7 +796,6 @@ namespace MatrixCalculatorAtWINFORMS
                 texboxForOneNum.Visible = true;
 
             }
-
         }
         private void VisibleMatrixB()// метод для отображения матрицы В
         {
@@ -872,13 +837,13 @@ namespace MatrixCalculatorAtWINFORMS
                 refreshB.Visible = false;
 
 
-                panelForoneNum.Visible = true;
-                texboxForOneNum.Visible = true;
+                //panelForoneNum.Visible = true;
+                //texboxForOneNum.Visible = true;
                 listboxForOneNum.Visible = true;
-                listboxForOneNum.Text = "в степени";
+                listboxForOneNum.Text = "в квадрате";
 
             }
-            if (radioButtonTypeOperation3.Checked == true)
+           /* if (radioButtonTypeOperation3.Checked == true)
             {
                 labelMultiplicationType.Visible = false;// скрываем при сложении тип операции
                 panelMultiplicationType.Visible = false;
@@ -897,7 +862,7 @@ namespace MatrixCalculatorAtWINFORMS
                 texboxForOneNum.Visible = true;
                 listboxForOneNum.Visible = true;
                 listboxForOneNum.Text = "корень степени";
-            }
+            }*/
         }
 
         private void refreshA_Click(object sender, EventArgs e) // рефреш матрицы А
@@ -925,9 +890,7 @@ namespace MatrixCalculatorAtWINFORMS
                     counterRowsB = 5;
                     arrСolumnsB[i, j].Text = "";
                 }
-            }
-
-            
+            }            
         }
         
         private void FooForRefrashB()
@@ -960,14 +923,11 @@ namespace MatrixCalculatorAtWINFORMS
                         T_MatrixR[i, j].Visible = false;
                     }
                 }
-
             }
-
         }
 
         private void ClearMatrixR()
         {
-
             for (int i = 0; i < 5; i++)
             {
                 for (int j = 0; j < 5; j++)
@@ -975,7 +935,6 @@ namespace MatrixCalculatorAtWINFORMS
                     
                     T_MatrixR[i, j].Text = "";
                 }
-
             }
         }
         private void result_Click(object sender, EventArgs e)
@@ -986,8 +945,6 @@ namespace MatrixCalculatorAtWINFORMS
                 {
                     switch (comboOperations.SelectedIndex)
                     {
-
-
                         case 0:
                             {
                                 ClearMatrixR();
@@ -1041,14 +998,12 @@ namespace MatrixCalculatorAtWINFORMS
                                             MatrixA_Multiplication_Nums();
                                             ChangeOfZizeMatrixR();
                                         }
-                                    }
-                                    
+                                    }                                    
                                 }
                                 break;
                             }
                         case 3:
                             {
-
                                 ClearMatrixR();
                                 MatrixA_Division_Nums();
                                 ChangeOfZizeMatrixR();
@@ -1066,17 +1021,26 @@ namespace MatrixCalculatorAtWINFORMS
                 }
                 if (radioButtonTypeOperation2.Checked == true)
                 {
+                    
+                    
                     ClearMatrixR();
                     Exponentiation_MatrixA();
                     ChangeOfZizeMatrixR();
+                    for (int i = 0; i < 5; i++)
+                    {
+                        for (int j = 0; j < 5; j++)
+                        {
+                            MatrixR[i, j] = 0;
+                        }
+                    }
                 }
-                if (radioButtonTypeOperation3.Checked == true)
+                /*if (radioButtonTypeOperation3.Checked == true)
                 {
                     ClearMatrixR();
-                    Extraction_MatrixA();
+                    Interpreter();
                     ChangeOfZizeMatrixR();
 
-                }
+                }*/
             }
             catch
             {
@@ -1133,7 +1097,6 @@ namespace MatrixCalculatorAtWINFORMS
 
         private void MatrixA_Multiplication_MatrixB()// умножение матрицы на матрицу
         {
-
             if (counterColumnsA == counterRowsB)
             {
                 FillingMatrixA();
@@ -1153,8 +1116,6 @@ namespace MatrixCalculatorAtWINFORMS
                 }
 
                 WriteMatrixRForMult();
-
-
             }
             else
             {
@@ -1178,7 +1139,6 @@ namespace MatrixCalculatorAtWINFORMS
                 }
             }
             WriteMatrixR();
-
         }
 
         private void MatrixA_Division_Nums()// деление на число
@@ -1197,38 +1157,56 @@ namespace MatrixCalculatorAtWINFORMS
             WriteMatrixR();
         }
 
+        //==================ВОЗВЕДЕНИЕ В СТЕПЕНЬ===============//
         private void Exponentiation_MatrixA()
         {
-            double num = Convert.ToDouble(texboxForOneNum.Text);
-            //int check = 1;
+            //double num = Convert.ToDouble(texboxForOneNum.Text);
+            
             FillingMatrixA();
-
-            for (int i = 0; i < counterRowsA; i++)
+            for (int b = 0; b < 2; b++)
             {
-                for (int j = 0; j < counterColumnsA; j++)
+                for (int i = 0; i < counterRowsA; i++)
                 {
+                    for (int j = 0; j < counterColumnsB; j++)
+                    {
 
-                    MatrixR[i, j] = Math.Pow(MatrixA[i, j], num);
-                }
+                        for (int k = 0; k < counterColumnsB; k++)
+                        {
+                            
+                                //MatrixR[i, j] = Math.Round((MatrixA[i, k] * MatrixA[k, j]) / 2, 0);
+                                MatrixR[i, j] += (MatrixA[i, k] * MatrixA[k, j])/2;
+                                //MatrixR[i, j] += (MatrixA[i, k] * MatrixA[k, j])/2;
+                            
+                        }
+                    }
+                }                
+                WriteMatrixR();
             }
-            WriteMatrixR();
         }
 
-        private void Extraction_MatrixA()
-        {
-            double num = 1 / Convert.ToDouble(texboxForOneNum.Text);
-            //int check = 1;
-            FillingMatrixA();
+        
 
+        //==============ТРАНСПОНИРОВАНИЕ==============//
+        private void Transpose()
+        {
+            counterRowsB = counterRowsA;
+            counterColumnsB = counterColumnsA;
+            ClearMatrixR();
+            FillingMatrixA();
+            
             for (int i = 0; i < counterRowsA; i++)
             {
-                for (int j = 0; j < counterColumnsA; j++)
+                for(int j = 0; j < counterColumnsA; j++)
                 {
-
-                    MatrixR[i, j] = Math.Pow(MatrixA[i, j], num);
+                    MatrixB[j, i] = MatrixA[i, j];
+                    MatrixR[i, j] = MatrixB[i, j];
                 }
             }
+            
             WriteMatrixR();
+            ChangeOfZizeMatrixR();
+            counterRowsB = 5;
+            counterColumnsB = 5;
         }
         private void button10_Click(object sender, EventArgs e)
         {
@@ -1260,7 +1238,6 @@ namespace MatrixCalculatorAtWINFORMS
 
         private void button11_Click(object sender, EventArgs e)
         {
-
             if (buttonSettings.Text == "Настройки")
             {
                 this.Size = new Size(850, 455);
@@ -1271,11 +1248,6 @@ namespace MatrixCalculatorAtWINFORMS
                 buttonSettings.Text = "Настройки";
                 this.Size = new Size(850, 420);
             }
-
-
-
-
-
         }
 
         private void checkBoxHints_CheckedChanged(object sender, EventArgs e)
@@ -1291,8 +1263,7 @@ namespace MatrixCalculatorAtWINFORMS
             
             if (checkBoxForDark.Checked == true)
             {
-                this.BackColor = Color.FromArgb(27, 27, 27);// форма
-                
+                this.BackColor = Color.FromArgb(27, 27, 27);// форма                
 
                 panel3.BackColor = Color.FromArgb(49, 49, 49);// матрица а
                 label3.BackColor = Color.FromArgb(49, 49, 49);
@@ -1311,8 +1282,6 @@ namespace MatrixCalculatorAtWINFORMS
                     }
                 }
 
-
-
                 panel4.BackColor = Color.FromArgb(49, 49, 49);// матрица b
                 label4.BackColor = Color.FromArgb(49, 49, 49);
                 buttonBMinusСolumn.BackColor = Color.FromArgb(60, 60, 60);
@@ -1320,6 +1289,7 @@ namespace MatrixCalculatorAtWINFORMS
                 buttonBPlusСolumn.BackColor = Color.FromArgb(98, 98, 98);
                 buttonBPlusRows.BackColor = Color.FromArgb(98, 98, 98);
                 refreshB.BackColor = Color.FromArgb(129, 129, 129);
+                refreshMatrixR.BackColor = Color.FromArgb(129, 129, 129);
                 for (int i = 0; i < 5; i++)
                 {
                     for (int j = 0; j < 5; j++)
@@ -1364,11 +1334,9 @@ namespace MatrixCalculatorAtWINFORMS
                 texboxForOneNum.ForeColor = Color.FromArgb(226, 239, 234);
                 listboxForOneNum.BackColor = Color.FromArgb(49, 49, 49);
                 button1.BackColor = Color.FromArgb(98, 98, 98);
+                button2.BackColor = Color.FromArgb(49, 49, 49);
 
             }
-
-
-
 
             else
             {
@@ -1392,7 +1360,6 @@ namespace MatrixCalculatorAtWINFORMS
                     }
                 }
 
-
                 panel4.BackColor = Color.FromArgb(52, 198, 205);// матрица b
                 label4.BackColor = Color.FromArgb(52, 198, 205);
                 buttonBMinusСolumn.BackColor = Color.FromArgb(0, 96, 100);
@@ -1400,6 +1367,7 @@ namespace MatrixCalculatorAtWINFORMS
                 buttonBPlusСolumn.BackColor = Color.FromArgb(93, 200, 205);
                 buttonBPlusRows.BackColor = Color.FromArgb(93, 200, 205);
                 refreshB.BackColor = Color.FromArgb(29, 112, 116);
+                refreshMatrixR.BackColor = Color.FromArgb(29, 112, 116);
                 for (int i = 0; i < 5; i++)
                 {
                     for (int j = 0; j < 5; j++)
@@ -1443,6 +1411,8 @@ namespace MatrixCalculatorAtWINFORMS
                 texboxForOneNum.ForeColor = SystemColors.WindowText;
                 listboxForOneNum.BackColor = Color.FromArgb(52, 198, 205);
                 button1.BackColor = Color.FromArgb(93, 200, 205);
+                button2.BackColor = Color.FromArgb(93, 200, 205);
+
 
             }
 
@@ -1456,8 +1426,7 @@ namespace MatrixCalculatorAtWINFORMS
                             "Калькулятор матриц", MessageBoxButtons.OK, MessageBoxIcon.Question);
             }
             else
-            {
-                
+            {                
                 for (int i = 0; i < 5; i++)
                 {
                     for (int j = 0; j < 5; j++)
@@ -1469,9 +1438,7 @@ namespace MatrixCalculatorAtWINFORMS
 
                     }
                     
-                }
-
-                
+                }                
             }
         }
 
@@ -1481,13 +1448,33 @@ namespace MatrixCalculatorAtWINFORMS
             form2.Show();
         }
 
-        
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {               
+                    Transpose();
+                    Transpose();                
+            }
+            catch
+            {
+                MessageBox.Show("Нельзя оставлять поля пустыми",
+                                "Калькулятор матриц", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
-
+        private void refreshMatrixR_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    T_MatrixR[i, j].Visible = true;
+                    
+                    T_MatrixR[i, j].Text = "";
+                }
+            }
+        }
     }
-
-
-
 }
 
     

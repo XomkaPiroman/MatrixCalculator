@@ -58,7 +58,6 @@ namespace MatrixCalculatorAtWINFORMS
             this.comboOperations = new System.Windows.Forms.ComboBox();
             this.radioButtonMultiplicationType1 = new System.Windows.Forms.RadioButton();
             this.radioButtonMultiplicationType2 = new System.Windows.Forms.RadioButton();
-            this.radioButtonTypeOperation3 = new System.Windows.Forms.RadioButton();
             this.radioButtonTypeOperation1 = new System.Windows.Forms.RadioButton();
             this.radioButtonTypeOperation2 = new System.Windows.Forms.RadioButton();
             this.panelMultiplicationType = new System.Windows.Forms.Panel();
@@ -142,6 +141,8 @@ namespace MatrixCalculatorAtWINFORMS
             this.checkBoxForDark = new System.Windows.Forms.CheckBox();
             this.checkBoxHints = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.refreshMatrixR = new System.Windows.Forms.Button();
             this.panelMultiplicationType.SuspendLayout();
             this.panelOperationType.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -400,26 +401,13 @@ namespace MatrixCalculatorAtWINFORMS
             this.radioButtonMultiplicationType2.UseVisualStyleBackColor = true;
             this.radioButtonMultiplicationType2.CheckedChanged += new System.EventHandler(this.MultiplicationType);
             // 
-            // radioButtonTypeOperation3
-            // 
-            this.radioButtonTypeOperation3.AutoSize = true;
-            this.radioButtonTypeOperation3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.radioButtonTypeOperation3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButtonTypeOperation3.Location = new System.Drawing.Point(16, 103);
-            this.radioButtonTypeOperation3.Name = "radioButtonTypeOperation3";
-            this.radioButtonTypeOperation3.Size = new System.Drawing.Size(85, 36);
-            this.radioButtonTypeOperation3.TabIndex = 6;
-            this.radioButtonTypeOperation3.Text = "√[A]";
-            this.radioButtonTypeOperation3.UseVisualStyleBackColor = true;
-            this.radioButtonTypeOperation3.CheckedChanged += new System.EventHandler(this.OperationType);
-            // 
             // radioButtonTypeOperation1
             // 
             this.radioButtonTypeOperation1.AutoSize = true;
             this.radioButtonTypeOperation1.Checked = true;
             this.radioButtonTypeOperation1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.radioButtonTypeOperation1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButtonTypeOperation1.Location = new System.Drawing.Point(16, 17);
+            this.radioButtonTypeOperation1.Location = new System.Drawing.Point(16, 18);
             this.radioButtonTypeOperation1.Name = "radioButtonTypeOperation1";
             this.radioButtonTypeOperation1.Size = new System.Drawing.Size(108, 36);
             this.radioButtonTypeOperation1.TabIndex = 4;
@@ -433,11 +421,11 @@ namespace MatrixCalculatorAtWINFORMS
             this.radioButtonTypeOperation2.AutoSize = true;
             this.radioButtonTypeOperation2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.radioButtonTypeOperation2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButtonTypeOperation2.Location = new System.Drawing.Point(16, 62);
+            this.radioButtonTypeOperation2.Location = new System.Drawing.Point(16, 76);
             this.radioButtonTypeOperation2.Name = "radioButtonTypeOperation2";
             this.radioButtonTypeOperation2.Size = new System.Drawing.Size(78, 36);
             this.radioButtonTypeOperation2.TabIndex = 5;
-            this.radioButtonTypeOperation2.Text = "[A]ⁿ";
+            this.radioButtonTypeOperation2.Text = "[A]²";
             this.radioButtonTypeOperation2.UseVisualStyleBackColor = true;
             this.radioButtonTypeOperation2.CheckedChanged += new System.EventHandler(this.OperationType);
             // 
@@ -468,7 +456,6 @@ namespace MatrixCalculatorAtWINFORMS
             // 
             this.panelOperationType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(198)))), ((int)(((byte)(205)))));
             this.panelOperationType.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelOperationType.Controls.Add(this.radioButtonTypeOperation3);
             this.panelOperationType.Controls.Add(this.radioButtonTypeOperation2);
             this.panelOperationType.Controls.Add(this.radioButtonTypeOperation1);
             this.panelOperationType.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -1360,11 +1347,41 @@ namespace MatrixCalculatorAtWINFORMS
             this.button1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.Location = new System.Drawing.Point(1025, 9);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(164, 34);
+            this.button1.Size = new System.Drawing.Size(180, 34);
             this.button1.TabIndex = 76;
             this.button1.Text = "Копировать в А";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(200)))), ((int)(((byte)(205)))));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.Location = new System.Drawing.Point(253, 9);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(136, 34);
+            this.button2.TabIndex = 77;
+            this.button2.Text = "Транспон-ие";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // refreshMatrixR
+            // 
+            this.refreshMatrixR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(112)))), ((int)(((byte)(116)))));
+            this.refreshMatrixR.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.refreshMatrixR.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.refreshMatrixR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.refreshMatrixR.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.refreshMatrixR.Location = new System.Drawing.Point(1204, 9);
+            this.refreshMatrixR.Name = "refreshMatrixR";
+            this.refreshMatrixR.Size = new System.Drawing.Size(34, 34);
+            this.refreshMatrixR.TabIndex = 78;
+            this.refreshMatrixR.Text = "↺";
+            this.refreshMatrixR.UseVisualStyleBackColor = false;
+            this.refreshMatrixR.Click += new System.EventHandler(this.refreshMatrixR_Click);
             // 
             // Form1
             // 
@@ -1372,6 +1389,8 @@ namespace MatrixCalculatorAtWINFORMS
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(147)))), ((int)(((byte)(154)))));
             this.ClientSize = new System.Drawing.Size(1249, 629);
+            this.Controls.Add(this.refreshMatrixR);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panelSettings);
             this.Controls.Add(this.refreshB);
@@ -1457,7 +1476,6 @@ namespace MatrixCalculatorAtWINFORMS
         private System.Windows.Forms.ComboBox comboOperations;
         private System.Windows.Forms.RadioButton radioButtonMultiplicationType1;
         private System.Windows.Forms.RadioButton radioButtonMultiplicationType2;
-        private System.Windows.Forms.RadioButton radioButtonTypeOperation3;
         private System.Windows.Forms.RadioButton radioButtonTypeOperation1;
         private System.Windows.Forms.RadioButton radioButtonTypeOperation2;
         private System.Windows.Forms.Panel panelMultiplicationType;
@@ -1541,6 +1559,8 @@ namespace MatrixCalculatorAtWINFORMS
         private System.Windows.Forms.CheckBox checkBoxForDark;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button refreshMatrixR;
     }
 }
 
